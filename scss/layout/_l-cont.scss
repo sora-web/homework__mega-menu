@@ -29,11 +29,32 @@
 
     &__inner {
       @include responsive.responsive(lg) {
+        padding-right: vw.vw(20px);
+        padding-left: vw.vw(20px);
         width: calc(85%);
       }
       @include responsive.responsive(xl) {
+        padding-right: 20px;
+        padding-left: 20px;
         width: calc(100% * 940 / 1360);
         max-width: calc(900px + 40px);
+      }
+    }
+  }
+
+  //works
+  &--works {
+    padding-top: 200px;
+    &__inner {
+      padding-right: vw.vw(20px);
+      padding-left: 0;
+      max-width: 100%;
+
+      @include responsive.responsive(lg) {
+      }
+      @include responsive.responsive(xl) {
+        padding-right: calc(100% * 233 / 1366);
+        padding-left: 0px;
       }
     }
   }
