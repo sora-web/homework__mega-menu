@@ -1,0 +1,44 @@
+// foundaton
+@use "foundation/reset";
+@use "foundation/base";
+
+//variables
+@use "variables/breakpoints";
+@use "variables/lists";
+@use "variables/colors";
+
+///utility
+@use "utility/responsive";
+@use "utility/flex";
+@use "utility/only";
+@use "utility/margin";
+@use "utility/padding";
+@use "utility/strip-unit";
+@use "utility/vw";
+@use "utility/rem";
+@use "utility/font";
+@use "utility/position";
+@use "utility/align";
+
+// layout
+@use "layout/l-header";
+@use "layout/l-mv";
+@use "layout/l-cont";
+@use "layout/l-footer";
+
+//conponent
+
+@use "object/component/logo";
+@use "object/component/btn";
+@use "object/component/background";
+@use "object/component/heading";
+@use "object/component/text";
+
+// //project
+
+@use "object/project/header";
+@use "object/project/mv";
+@use "object/project/feature";
+@use "object/project/works";
+@use "object/project/contact";
+@use "object/project/footer";

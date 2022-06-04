@@ -1,0 +1,19 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-logo {
+  @include font.DIN-bold;
+  font-size: rem.rem(16px);
+  letter-spacing: 0em;
+  line-height: 1;
+
+  @include responsive.responsive(lg) {
+    font-size: rem.rem(20px);
+    letter-spacing: 0em;
+    line-height: 1;
+  }
+}

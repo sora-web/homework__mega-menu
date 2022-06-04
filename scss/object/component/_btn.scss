@@ -1,0 +1,23 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-btn {
+  display: inline-block;
+  @include font.DIN-bold;
+  color: #142474;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.c-rounded-btn {
+  display: inline-block;
+  @include font.DIN-bold;
+  color: #ffffff;
+  background-color: #142474;
+  text-align: center;
+  border-radius: 34px;
+}

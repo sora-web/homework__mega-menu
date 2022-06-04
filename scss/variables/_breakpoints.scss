@@ -1,0 +1,25 @@
+$breakpoints: (
+  "xs": (
+    min-width: 0,
+  ),
+  "sm": (
+    min-width: 390px,
+    //デザインデータ
+  ),
+  "md": (
+    min-width: 520px,
+    //tabの最低サイズ
+  ),
+  "lg": (
+    min-width: 640px,
+    //free
+  ),
+  "xl": (
+    min-width: 960px,
+    //pcの最低サイズ
+  ),
+  "xxl": (
+    min-width: 1360px,
+    //デザインデータ
+  ),
+) !default;
