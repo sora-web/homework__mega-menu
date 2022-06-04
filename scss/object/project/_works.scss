@@ -27,6 +27,7 @@
       padding-bottom: 123px;
       padding-left: 80px;
       padding-right: 30px;
+      max-width: 2000px;
     }
 
     #{$block}__heading {
@@ -79,6 +80,7 @@
           flex-direction: row;
           justify-content: space-between;
           width: calc(100% * 850 / 723);
+          max-width: 1300px;
         }
 
         #{$block}__btn-unit {
