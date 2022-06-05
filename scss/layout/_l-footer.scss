@@ -3,6 +3,13 @@
 @use "../utility/rem" as rem;
 
 .l-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #020929;
+  @include responsive.responsive(lg) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
   &__inner {
     @include responsive.responsive(xl) {
     }

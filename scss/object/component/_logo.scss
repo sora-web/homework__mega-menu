@@ -8,12 +8,9 @@
 .c-logo {
   @include font.DIN-bold;
   font-size: rem.rem(16px);
-  letter-spacing: 0em;
+  letter-spacing: 0.02em;
   line-height: 1;
-
   @include responsive.responsive(lg) {
     font-size: rem.rem(20px);
-    letter-spacing: 0em;
-    line-height: 1;
   }
 }
