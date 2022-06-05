@@ -6,12 +6,72 @@
 @use "../../utility/font" as font;
 @use "../../utility/vw" as vw;
 
+// .random-demo {
+//   width: 100%;
+//   height: 100vh;
+// }
+.p-mv-round {
+  position: absolute;
+
+  &-purple1 {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    @include responsive.responsive(lg) {
+      width: 180px;
+      height: 180px;
+    }
+    img {
+    }
+  }
+  &-purple2 {
+    top: 0;
+    left: 0;
+
+    width: 160px;
+    height: 160px;
+    @include responsive.responsive(xxl) {
+      width: 360px;
+      height: 360px;
+    }
+    img {
+    }
+  }
+  &-purple3 {
+    top: 25%;
+    left: 25%;
+
+    width: 196px;
+    height: 196px;
+    @include responsive.responsive(xxl) {
+      width: 400px;
+      height: 400px;
+    }
+    img {
+    }
+  }
+
+  &-yellow {
+    top: 25%;
+    left: 25%;
+    width: 235px;
+    height: 235px;
+    @include responsive.responsive(xxl) {
+      width: 400px;
+      height: 400px;
+    }
+    img {
+    }
+  }
+}
+
 .p-mv {
   $block: &;
-
   position: relative;
   width: 100%;
   height: calc(100vh);
+  overflow: hidden;
 
   &__message {
     &--sp {

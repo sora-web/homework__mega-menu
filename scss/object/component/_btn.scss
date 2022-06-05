@@ -8,15 +8,23 @@
 .c-btn {
   display: inline-block;
   @include font.DIN-bold;
+  font-size: rem.rem(20px);
+  letter-spacing: 0.1em;
+  line-height: 1;
   color: #142474;
   background-color: #ffffff;
+  border: 1px solid transparent;
   text-align: center;
+  @include responsive.responsive(lg) {
+    font-size: rem.rem(24px);
+  }
 
+  &:focus,
   &:hover {
     transition: 0.3s;
     color: #142474;
     background-color: #ffffff;
-    border-color: currentColor;
+    border: 2px solid #142474;
   }
 }
 

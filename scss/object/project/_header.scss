@@ -6,11 +6,16 @@
 @use "../../utility/font" as font;
 @use "../../utility/vw" as vw;
 
+.fixedClass {
+  color: #ffffff;
+}
+
 .p-header {
   $block: &;
 
   &__inner {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     #{$block}__logo {
@@ -80,6 +85,25 @@
             line-height: 1;
           }
         }
+      }
+    }
+  }
+  &--fixed {
+    #{$block}__logo {
+      color: #ffffff;
+    }
+    #{$block}__item a {
+      color: #ffffff;
+    }
+    #{$block}__btn {
+      a {
+        color: #142474;
+        background-color: #ffffff;
+      }
+    }
+    #{$block}__burger {
+      span {
+        background-color: #ffffff;
       }
     }
   }

@@ -58,14 +58,26 @@
     }
   }
 
-  // &-- {
-  //   padding-top: 147px;
-  //   padding-bottom: 148px;
-  //   @include responsive.responsive(lg) {
-  //     padding-top: 108px;
-  //     padding-bottom: 310px;
-  //   }
-  // }
+  // contact
+
+  &--contact {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    @include responsive.responsive(lg) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    &__inner {
+      padding-right: 0;
+      padding-left: 0;
+      max-width: 100%;
+
+      @include responsive.responsive(lg) {
+      }
+      @include responsive.responsive(xl) {
+      }
+    }
+  }
 }
 
 .l-cont {

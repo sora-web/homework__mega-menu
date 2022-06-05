@@ -204,13 +204,25 @@
       }
 
       #{$block}__card-unit {
+        overflow: hidden;
         display: flex;
+        width: calc(50% + 50vw - 100% * 22 / 390);
+        @include responsive.responsive(lg) {
+          width: calc(50% + 50vw - 100% * 240 / 960);
+        }
+        @include responsive.responsive(xl) {
+          width: calc(50% + 50vw - 100% * 118 / 1366);
+        }
         #{$block}__card {
+          width: calc(100% * 260 / (50% + 50vw - 100% * 22 / 390)) !important;
+
           @include responsive.responsive(lg) {
             width: calc(300px);
           }
           @include responsive.responsive(xl) {
-            width: calc(100% * 400 / 723);
+            width: calc(
+              100% * 400 / (50% + 50vw - 100% * 115 / 1366)
+            ) !important;
           }
           #{$block}__card__img-wrapper {
             img {
@@ -222,8 +234,9 @@
             }
             #{$block}__card__list {
               display: inline-flex;
+              align-items: flex-start;
               flex-direction: column;
-              @include responsive.responsive(lg) {
+              @include responsive.responsive(xxl) {
                 flex-direction: row;
               }
               #{$block}__card__item {
