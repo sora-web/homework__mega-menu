@@ -72,51 +72,51 @@ gsap.to(".p-round-unit", {
 
 function randomValues() {
   anime({
-    targets: ".p-mv-round1",
+    targets: ".p-mv-round",
     translateX: function () {
-      return anime.random(0, 200);
+      return anime.random(-400, 400);
     },
     translateY: function () {
-      return anime.random(0, 100);
+      return anime.random(-400, 400);
     },
     easing: "easeInOutQuad",
-    duration: 10000,
+    duration: 20000,
     complete: randomValues,
 
-    breakpoints: {
-      640: {
-        translateX: function () {
-          return anime.random(0, 800);
-        },
-        translateY: function () {
-          return anime.random(0, 400);
-        },
-      },
-      960: {
-        autoplay: false,
-        slidesPerView: 2.3,
-        spaceBetween: 50,
-      },
-    },
+    // breakpoints: {
+    //   640: {
+    //     translateX: function () {
+    //       return anime.random(0, 800);
+    //     },
+    //     translateY: function () {
+    //       return anime.random(0, 400);
+    //     },
+    //   },
+    //   960: {
+    //     autoplay: false,
+    //     slidesPerView: 2.3,
+    //     spaceBetween: 50,
+    //   },
+    // },
   });
 }
 
 randomValues();
 
-function randomValues2() {
-  anime({
-    targets: ".p-mv-round2",
-    translateX: function () {
-      return anime.random(0, 300);
-    },
-    translateY: function () {
-      return anime.random(0, 300);
-    },
-    width: "80%",
-    easing: "easeInOutQuad",
-    duration: 10000,
-    complete: randomValues,
-  });
-}
+// function randomValues2() {
+//   anime({
+//     targets: ".p-mv-round2",
+//     translateX: function () {
+//       return anime.random(0, 300);
+//     },
+//     translateY: function () {
+//       return anime.random(0, 300);
+//     },
+//     width: "80%",
+//     easing: "easeInOutQuad",
+//     duration: 10000,
+//     complete: randomValues,
+//   });
+// }
 
-randomValues2();
+// randomValues2();

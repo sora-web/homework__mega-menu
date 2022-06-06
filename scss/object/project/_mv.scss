@@ -16,6 +16,9 @@
   &-purple1 {
     top: 0;
     left: 0;
+
+    top: 30%;
+    left: 30%;
     width: 90px;
     height: 90px;
     @include responsive.responsive(lg) {
@@ -26,9 +29,11 @@
     }
   }
   &-purple2 {
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 50%;
 
+    top: 30%;
+    left: 50%;
     width: 160px;
     height: 160px;
     @include responsive.responsive(xxl) {
@@ -40,8 +45,10 @@
   }
   &-purple3 {
     top: 25%;
-    left: 25%;
+    left: 10%;
 
+    top: 50%;
+    left: 30%;
     width: 196px;
     height: 196px;
     @include responsive.responsive(xxl) {
@@ -53,8 +60,11 @@
   }
 
   &-yellow {
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+
+    top: 50%;
+    left: 50%;
     width: 235px;
     height: 235px;
     @include responsive.responsive(xxl) {

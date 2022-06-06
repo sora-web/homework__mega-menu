@@ -30186,6 +30186,30 @@ padding
     padding-bottom: 25px;
   }
 }
+.l-cont-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 640px) {
+  .l-cont-page {
+    padding-top: 160px;
+    padding-bottom: 200px;
+  }
+}
+.l-cont-page__inner {
+  padding-right: 5.3333333333vw;
+  padding-left: 5.3333333333vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 640px) {
+  .l-cont-page__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1520px;
+  }
+}
+
 .c-logo {
   font-family: din-2014, sans-serif;
   font-weight: 700;
@@ -30294,6 +30318,36 @@ padding
 @media screen and (min-width: 960px) {
   .c-heading--jp {
     font-size: 1.3125rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+}
+
+.c-heading-child--en {
+  font-family: din-2014, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.25rem;
+  letter-spacing: 0em;
+  line-height: 1;
+}
+@media screen and (min-width: 960px) {
+  .c-heading-child--en {
+    font-size: 2.8125rem;
+    letter-spacing: 0em;
+    line-height: 1;
+  }
+}
+.c-heading-child--jp {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #142474;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+@media screen and (min-width: 640px) {
+  .c-heading-child--jp {
+    font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 1;
   }
@@ -30497,6 +30551,8 @@ padding
 .p-mv-round-purple1 {
   top: 0;
   left: 0;
+  top: 30%;
+  left: 30%;
   width: 90px;
   height: 90px;
 }
@@ -30507,8 +30563,10 @@ padding
   }
 }
 .p-mv-round-purple2 {
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 50%;
+  top: 30%;
+  left: 50%;
   width: 160px;
   height: 160px;
 }
@@ -30520,7 +30578,9 @@ padding
 }
 .p-mv-round-purple3 {
   top: 25%;
-  left: 25%;
+  left: 10%;
+  top: 50%;
+  left: 30%;
   width: 196px;
   height: 196px;
 }
@@ -30531,8 +30591,10 @@ padding
   }
 }
 .p-mv-round-yellow {
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  top: 50%;
+  left: 50%;
   width: 235px;
   height: 235px;
 }
@@ -30758,22 +30820,6 @@ padding
   }
 }
 
-.p-works .p-works__inner {
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 80px;
-  padding-right: 30px;
-}
-@media screen and (min-width: 640px) {
-  .p-works .p-works__inner {
-    padding-top: 123px;
-    padding-bottom: 123px;
-    padding-left: 80px;
-    padding-right: 30px;
-    max-width: 2000px;
-  }
-}
 .p-works .p-works__inner .p-works__heading {
   display: flex;
   position: absolute;
@@ -31024,25 +31070,31 @@ padding
   left: 50%;
   transform: rotate(45deg);
 }
-.p-contact {
+.p-contact-top__wrapper {
+  background-color: #071453;
+}
+.p-contact .p-contact-top {
   position: relative;
   padding-top: 120px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 52px);
 }
-.p-contact__wrapper {
-  background-color: #071453;
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-top {
+    padding-top: 160px;
+    height: calc(100vh - 63px);
+  }
 }
-.p-contact__inner {
-  width: 89.7435897436%;
+.p-contact .p-contact-top .p-contact__inner {
+  width: 79.4871794872%;
   margin-left: auto;
   margin-right: auto;
 }
-.p-contact__inner .p-contact__heading {
+.p-contact .p-contact-top .p-contact__inner .p-contact__heading {
   position: relative;
   text-align: center;
 }
-.p-contact__inner .p-contact__heading::before {
+.p-contact .p-contact-top .p-contact__inner .p-contact__heading::before {
   position: absolute;
   content: "";
   display: inline-block;
@@ -31056,20 +31108,20 @@ padding
   vertical-align: middle;
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__heading::before {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__heading::before {
     top: -30px;
     width: 27px;
     height: 18px;
   }
 }
-.p-contact__inner .p-contact__heading--en {
+.p-contact .p-contact-top .p-contact__inner .p-contact__heading--en {
   color: #ffffff;
 }
-.p-contact__inner .p-contact__heading--jp {
+.p-contact .p-contact-top .p-contact__inner .p-contact__heading--jp {
   color: #ffffff;
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__body {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__body {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -31078,58 +31130,56 @@ padding
     max-width: 900px;
   }
 }
-@media screen and (min-width: 640px) and (min-width: 640px) {
-  .p-contact__inner .p-contact__body .p-contact__primary {
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__primary {
     width: calc((100% - 25px) / 2);
   }
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__body .p-contact__secondary {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__secondary {
     width: calc((100% - 25px) / 2);
   }
 }
-.p-contact__inner .p-contact__body .p-contact__item .p-contact__title {
-  font-family: yu-gothic-pr6n, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__item .p-contact__title {
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   line-height: 1;
   color: #ffffff;
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__body .p-contact__item .p-contact__title {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__item .p-contact__title {
     font-size: 1.0625rem;
     letter-spacing: 0.1em;
     line-height: 1;
   }
 }
-.p-contact__inner .p-contact__body .p-contact__item .p-contact__textbox {
+.p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__item .p-contact__textbox {
   width: 100%;
   height: 40px;
   background-color: #ffffff;
 }
-.p-contact__inner .p-contact__body .p-contact__item .p-contact__textarea {
+.p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__item .p-contact__textarea {
   width: 100%;
   height: 140px;
   background-color: #ffffff;
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__body .p-contact__item .p-contact__textarea {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__body .p-contact__item .p-contact__textarea {
     height: 240px;
   }
 }
-.p-contact__inner .p-contact__btn-unit {
+.p-contact .p-contact-top .p-contact__inner .p-contact__btn-unit {
   text-align: center;
 }
-.p-contact__inner .p-contact__btn-unit .p-contact__btn {
+.p-contact .p-contact-top .p-contact__inner .p-contact__btn-unit .p-contact__btn {
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 100%;
   width: 250px;
 }
 @media screen and (min-width: 640px) {
-  .p-contact__inner .p-contact__btn-unit .p-contact__btn {
+  .p-contact .p-contact-top .p-contact__inner .p-contact__btn-unit .p-contact__btn {
     width: 300px;
   }
 }
@@ -31151,6 +31201,127 @@ padding
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     line-height: 1;
+  }
+}
+
+.p-contact {
+  position: relative;
+}
+.p-contact-page__wrapper {
+  background-color: rgba(20, 36, 116, 0.1);
+}
+.p-contact .p-contact-page .p-contact__inner {
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__heading {
+  position: relative;
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__heading--en span::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: 13px;
+  left: 125px;
+  width: 18px;
+  height: 12px;
+  background-image: url(../img/mail-page.svg);
+  background-size: cover;
+  vertical-align: middle;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__heading--en span::after {
+    top: 15x;
+    left: 200px;
+    width: 27px;
+    height: 18px;
+  }
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body {
+  width: 79.4871794872%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body {
+    width: 100%;
+    max-width: 900px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input {
+    width: 77.7777777778%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item {
+    display: flex;
+  }
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__title {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__title {
+    font-size: 1.0625rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__textbox {
+  height: 40px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__textbox {
+    width: 50%;
+  }
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__textarea {
+  height: 140px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__textarea {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__input .p-contact__item .p-contact__textarea {
+    height: 240px;
+  }
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__btn-unit {
+  text-align: center;
+}
+.p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__btn-unit .p-contact__btn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 100%;
+  width: 250px;
+  color: #ffffff;
+  background-color: #142474;
+}
+@media screen and (min-width: 640px) {
+  .p-contact .p-contact-page .p-contact__inner .p-contact__body .p-contact__btn-unit .p-contact__btn {
+    width: 300px;
   }
 }
 

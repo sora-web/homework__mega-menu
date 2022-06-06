@@ -16,19 +16,19 @@
   $block: &;
 
   #{$block}__inner {
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-    padding-right: 30px;
+    // position: relative;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
+    // padding-left: 80px;
+    // padding-right: 30px;
 
-    @include responsive.responsive(lg) {
-      padding-top: 123px;
-      padding-bottom: 123px;
-      padding-left: 80px;
-      padding-right: 30px;
-      max-width: 2000px;
-    }
+    // @include responsive.responsive(lg) {
+    //   padding-top: 123px;
+    //   padding-bottom: 123px;
+    //   padding-left: 80px;
+    //   padding-right: 30px;
+    //   max-width: 2000px;
+    // }
 
     #{$block}__heading {
       display: flex;

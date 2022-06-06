@@ -25,6 +25,7 @@
 @use "layout/l-mv";
 @use "layout/l-cont";
 @use "layout/l-footer";
+@use "layout/child-dentistry/l-cont-page";
 
 //conponent
 
@@ -42,3 +43,4 @@
 @use "object/project/works";
 @use "object/project/contact";
 @use "object/project/footer";
+@use "object/project/child-dentistry/contact-page";

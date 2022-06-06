@@ -41,3 +41,40 @@
     }
   }
 }
+
+.c-heading-child {
+  &--en {
+    @include font.DIN;
+    font-size: rem.rem(36px);
+    letter-spacing: 0em;
+    line-height: 1;
+
+    // @include responsive.responsive(lg) {
+    //   font-size: rem.rem(40px);
+    //   letter-spacing: 0em;
+    //   line-height: 1;
+    // }
+    @include responsive.responsive(xl) {
+      font-size: rem.rem(45px);
+      letter-spacing: 0em;
+      line-height: 1;
+    }
+  }
+  &--jp {
+    @include font.gothic-bold;
+    color: #142474;
+    font-size: rem.rem(14px);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    // @include responsive.responsive(lg) {
+    //   font-size: rem.rem(14px);
+    //   letter-spacing: 0.1em;
+    //   line-height: 1;
+    // }
+    @include responsive.responsive(lg) {
+      font-size: rem.rem(16px);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+  }
+}
