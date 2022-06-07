@@ -38,7 +38,24 @@
       width: calc(100% * 350 / 390);
       @include responsive.responsive(lg) {
         width: calc(100% * 940 / 1366);
-        max-width: calc(1366px + 80px * 2);
+        max-width: calc(1366px + 20px * 2);
+      }
+    }
+  }
+
+  &--works {
+    &__inner {
+      width: calc(100% * 390 / 390);
+
+      // @include responsive.responsive(lg) {
+      //   width: calc(640px);
+      // }
+      // @include responsive.responsive(xl) {
+      //   width: calc(960px);
+      // }
+      @include responsive.responsive(lg) {
+        width: calc(100% * 940 / 1366);
+        max-width: calc(1366px + 20px * 2);
       }
     }
   }

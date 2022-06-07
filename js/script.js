@@ -4,10 +4,6 @@ $(".p-header__burger").on("click", function () {
   $(".p-header__burger-view").toggleClass("is__open");
 });
 
-$("a.jquery-disabled").click(function () {
-  return false;
-});
-
 //sticky header
 $(function () {
   // ページ下部固定ボタン表示非表示
@@ -63,12 +59,12 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-gsap.to(".p-round-unit", {
-  rotate: true, //自動回転
-  repeat: -1, //無限に繰り返す
-  ease: "linear",
-  duration: 5, //アニメーションに5秒かける
-});
+// gsap.to(".p-round-unit", {
+//   rotate: true, //自動回転
+//   repeat: -1, //無限に繰り返す
+//   ease: "linear",
+//   duration: 5, //アニメーションに5秒かける
+// });
 
 function randomValues() {
   anime({
@@ -82,41 +78,7 @@ function randomValues() {
     easing: "easeInOutQuad",
     duration: 20000,
     complete: randomValues,
-
-    // breakpoints: {
-    //   640: {
-    //     translateX: function () {
-    //       return anime.random(0, 800);
-    //     },
-    //     translateY: function () {
-    //       return anime.random(0, 400);
-    //     },
-    //   },
-    //   960: {
-    //     autoplay: false,
-    //     slidesPerView: 2.3,
-    //     spaceBetween: 50,
-    //   },
-    // },
   });
 }
 
 randomValues();
-
-// function randomValues2() {
-//   anime({
-//     targets: ".p-mv-round2",
-//     translateX: function () {
-//       return anime.random(0, 300);
-//     },
-//     translateY: function () {
-//       return anime.random(0, 300);
-//     },
-//     width: "80%",
-//     easing: "easeInOutQuad",
-//     duration: 10000,
-//     complete: randomValues,
-//   });
-// }
-
-// randomValues2();

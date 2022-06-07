@@ -91,6 +91,7 @@
           padding-bottom: 30px;
           padding-left: 30px;
           border-top: 1px solid rgba(129, 129, 129, 0.18);
+          line-height: 1;
           @include responsive.responsive(lg) {
             width: calc(100% * 400 / 500);
             padding-left: 40px;
