@@ -18,14 +18,18 @@
       }
     }
     #{$block}__body {
-      @include responsive.responsive(lg) {
-        padding-left: 20px;
-        padding-right: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% * 330 / 350);
+
+      @include responsive.responsive(xl) {
+        padding-left: 80px;
+        padding-right: 80px;
         margin-right: calc(50% - 50vw);
         margin-left: calc(50% - 50vw);
         width: 100vw;
       }
-      @include responsive.responsive(xl) {
+      @include responsive.responsive(xxl) {
         padding-left: 0px;
         padding-right: 0px;
         margin-right: 0;
@@ -34,43 +38,55 @@
       }
 
       #{$block}__media {
-        width: calc(100% * 330 / 350);
-        @include responsive.responsive(lg) {
-          width: 100%;
+        width: 100%;
+        @include responsive.responsive(xl) {
           display: flex;
           justify-content: space-between;
-          margin-left: auto;
-          margin-right: auto;
+          // justify-content: space-between;
         }
         // @include responsive.responsive(xl) {
         //   display: flex;
         //   width: 80%;
         // }
         @include responsive.responsive(xxl) {
-          display: flex;
-          width: 100%;
+          // // display: flex;
+          // width: 100%;
+
+          //   justify-content: space-between;
+          // }
+          #{$block}__img-wrapper {
+            @include responsive.responsive(xl) {
+              width: calc(50%);
+              // width: calc(100% * 590 / 900);
+            }
+
+            @include responsive.responsive(xxl) {
+              width: calc(60%);
+            }
+            @media screen and (min-width: 1300px) {
+              width: calc(100% * 590 / 900);
+            }
+          }
+
+          // @include responsive.responsive(lg) {
+          //   width: calc(100% * 590 / 900);
+          // }
         }
-        #{$block}__img-wrapper {
-          @include responsive.responsive(lg) {
-            width: calc(50%);
-          }
-          @include responsive.responsive(xl) {
-            width: calc(50%);
-          }
-          @include responsive.responsive(xxxl) {
-            width: calc(100% * 590 / 900);
-          }
-        }
+
         #{$block}__text-wrapper {
-          @include responsive.responsive(lg) {
-            width: calc(50%);
-          }
           @include responsive.responsive(xl) {
             width: calc(50%);
+            // width: calc(100% * 310 / 900);
           }
-          @include responsive.responsive(xxxl) {
+
+          @include responsive.responsive(xxl) {
+            width: calc(40%);
+          }
+
+          @media screen and (min-width: 1300px) {
             width: calc(100% * 310 / 900);
           }
+
           #{$block}__text-unit {
             @include responsive.responsive(lg) {
               padding-left: calc(8%);
