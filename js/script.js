@@ -32,15 +32,15 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   watchSlidesVisibility: true,
   speed: 1000,
-  slidesPerView: 1.3,
+  slidesPerView: 1.2,
   spaceBetween: 20,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   breakpoints: {
     640: {
       autoplay: false,
-      slidesPerView: 2,
+      slidesPerView: 2.2,
       spaceBetween: 50,
     },
     960: {

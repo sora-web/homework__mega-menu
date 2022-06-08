@@ -15,19 +15,28 @@
 .p-works {
   $block: &;
 
+  width: calc(100% * 370 / 390);
+  @include responsive.responsive(lg) {
+    width: calc(100% * 1142 / 1366);
+  }
   #{$block}__inner {
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 80px;
-    padding-right: 30px;
+    padding-left: calc(100% * 80 / 370);
+    // padding-right: 30px;
+    // padding-right: calc(100% * 30 / 390);
+    // width: calc(100% * 370 / 390);
 
     @include responsive.responsive(lg) {
       padding-top: 123px;
       padding-bottom: 123px;
-      padding-left: 80px;
-      padding-right: 30px;
-      max-width: 2000px;
+      padding-left: 380px;
+      padding-left: calc(100% * 380 / 1140);
+      // padding-right: 30px;
+      // padding-right: calc(100% * 30 / 1366);
+      // width: calc(100% * 1142 / 1366);
     }
 
     #{$block}__heading {
@@ -68,9 +77,9 @@
       }
     }
     #{$block}__body {
-      @include responsive.responsive(lg) {
-        padding-left: calc(100% * 300 / 1023);
-      }
+      // @include responsive.responsive(lg) {
+      //   padding-left: calc(100% * 300 / 1023);
+      // }
 
       #{$block}__intro {
         display: flex;
@@ -213,24 +222,38 @@
       #{$block}__card-unit {
         overflow: hidden;
         display: flex;
-        width: calc(50% + 50vw - 100% * 22 / 390);
+
+        width: calc(100vw - 100vw * 80 / 390);
+
+        // @include responsive.responsive(lg) {
+        //   width: calc(50% + 50vw - 100% * 240 / 960);
+        // }
         @include responsive.responsive(lg) {
-          width: calc(50% + 50vw - 100% * 240 / 960);
+          width: calc(100vw - 100vw * 380 / 1366);
         }
-        @include responsive.responsive(xl) {
-          width: calc(50% + 50vw - 100% * 118 / 1366);
+        .swiper-wrapper {
+          transform: translate3d(0, 0, 0) !important;
+
+          width: calc(100vw - 100vw * 80 / 390);
+          // @include responsive.responsive(lg) {
+          //   width: calc(50% + 50vw - 100% * 240 / 960);
+          // }
+          @include responsive.responsive(lg) {
+            width: calc(100vw - 100vw * 380 / 1366);
+          }
         }
         #{$block}__card {
-          width: calc(100% * 260 / (50% + 50vw - 100% * 22 / 390)) !important;
+          display: inline-block;
+          width: calc(100% * 260 / 310) !important;
 
           @include responsive.responsive(lg) {
-            width: calc(300px);
+            width: calc(100% * 400 / 986) !important;
           }
-          @include responsive.responsive(xl) {
-            width: calc(
-              100% * 400 / (50% + 50vw - 100% * 115 / 1366)
-            ) !important;
-          }
+          // @include responsive.responsive(xl) {
+          //   width: calc(
+          //     100% * 400 / (50% + 50vw - 100% * 115 / 1366)
+          //   ) !important;
+          // }
           #{$block}__card__img-wrapper {
             img {
               width: 100%;

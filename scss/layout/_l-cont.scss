@@ -45,14 +45,13 @@
   //works
   &--works {
     &__inner {
-      padding-right: vw.vw(20px);
+      // padding-right: vw.vw(20px);
+      padding-right: 0;
       padding-left: 0;
       max-width: 100%;
 
       @include responsive.responsive(lg) {
-      }
-      @include responsive.responsive(xl) {
-        padding-right: calc(100% * 233 / 1366);
+        padding-right: 0px;
         padding-left: 0px;
       }
     }
