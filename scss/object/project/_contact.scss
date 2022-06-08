@@ -12,14 +12,19 @@
     background-color: #071453;
   }
   #{$block}-top {
-    position: relative;
-    padding-top: 120px;
+    // position: relative;
+    // padding-top: 120px;
+    // padding-top: calc(100% * 80 / 791);
+    padding-top: 80px;
+    // padding-bottom: 120px;
+    // padding-bottom: calc(100% * 60 / 791);
+    padding-bottom: 60px;
     width: 100%;
-    height: calc(100vh - 52px);
 
     @include responsive.responsive(lg) {
       padding-top: 160px;
-      height: calc(100vh - 63px);
+      padding-bottom: 160px;
+      // height: calc(100vh - 63px);
     }
     #{$block}__inner {
       width: calc(100% * 310 / 390);

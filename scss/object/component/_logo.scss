@@ -11,6 +11,9 @@
   letter-spacing: 0.02em;
   line-height: 1;
   @include responsive.responsive(lg) {
+    font-size: rem.rem(16px);
+  }
+  @include responsive.responsive(xl) {
     font-size: rem.rem(20px);
   }
 }

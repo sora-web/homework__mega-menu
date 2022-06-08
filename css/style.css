@@ -30247,6 +30247,11 @@ padding
 }
 @media screen and (min-width: 640px) {
   .c-logo {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .c-logo {
     font-size: 1.25rem;
   }
 }
@@ -31123,15 +31128,14 @@ padding
   background-color: #071453;
 }
 .p-contact .p-contact-top {
-  position: relative;
-  padding-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 60px;
   width: 100%;
-  height: calc(100vh - 52px);
 }
 @media screen and (min-width: 640px) {
   .p-contact .p-contact-top {
     padding-top: 160px;
-    height: calc(100vh - 63px);
+    padding-bottom: 160px;
   }
 }
 .p-contact .p-contact-top .p-contact__inner {
