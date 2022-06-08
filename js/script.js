@@ -10,7 +10,7 @@ $(function () {
   $(window).on("load scroll", function () {
     $header = $(".p-header");
     btnOffset = $(".l-cont--contact").offset().top;
-    x = $(".p-header__logo").height();
+    x = $(".p-header").height();
     fixedClass = "p-header--fixed";
   });
   $(function () {
