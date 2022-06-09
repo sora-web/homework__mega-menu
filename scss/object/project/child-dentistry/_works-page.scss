@@ -83,10 +83,12 @@
             width: calc(40%);
           }
 
-          @media screen and (min-width: 1300px) {
+          @media screen and (min-width: 1360px) {
             width: calc(100% * 310 / 900);
           }
-
+          // @include responsive.responsive(xxl) {
+          //   padding-left: calc(100% * 40 / 900);
+          // }
           #{$block}__text-unit {
             @include responsive.responsive(lg) {
               padding-left: calc(8%);
@@ -95,7 +97,7 @@
               padding-left: calc(11%);
             }
             @include responsive.responsive(xxl) {
-              padding-left: calc(100% * 40 / 310);
+              padding-left: calc(100% * 35 / 310);
             }
             #{$block}__site {
               p {
@@ -122,7 +124,7 @@
                   display: inline-block;
                   position: absolute;
                   top: 50%;
-                  left: -2px;
+                  left: 0;
                   transform: translateY(-50%);
 
                   width: 2px;

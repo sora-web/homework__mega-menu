@@ -1,3 +1,4 @@
+//burger
 $(".p-header__burger").on("click", function () {
   $("body").toggleClass("is__fixed");
   $(".p-header__burger").toggleClass("is__active");
@@ -34,9 +35,9 @@ const swiper = new Swiper(".swiper", {
   speed: 1000,
   slidesPerView: 1.2,
   spaceBetween: 20,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   breakpoints: {
     640: {
       autoplay: false,
@@ -49,7 +50,6 @@ const swiper = new Swiper(".swiper", {
       spaceBetween: 50,
     },
   },
-
   pagination: {
     el: ".js_swiper_pagination",
   },
@@ -59,13 +59,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// gsap.to(".p-round-unit", {
-//   rotate: true, //自動回転
-//   repeat: -1, //無限に繰り返す
-//   ease: "linear",
-//   duration: 5, //アニメーションに5秒かける
-// });
-
+//MV浮遊
 function randomValues() {
   anime({
     targets: ".p-mv-round",

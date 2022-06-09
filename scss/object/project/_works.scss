@@ -245,6 +245,7 @@
         #{$block}__card {
           display: inline-block;
           width: calc(100% * 260 / 310) !important;
+          width: calc(100vw * 260 / 390) !important;
 
           @include responsive.responsive(lg) {
             width: calc(100% * 400 / 986) !important;
