@@ -12,6 +12,7 @@
 // }
 .p-mv-round {
   position: absolute;
+  z-index: -3;
 
   &-purple1 {
     top: 0;
@@ -80,90 +81,95 @@
   $block: &;
   position: relative;
   width: 100%;
-  height: calc(100vh);
+  height: calc(100vh + 160px);
   overflow: hidden;
 
-  &__message {
-    &--sp {
-      position: absolute;
-      left: 40px;
-      bottom: 210px;
-      @include font.gothic-bold;
-      font-size: rem.rem(25px);
-      letter-spacing: 0.15em;
-      line-height: 1;
-
-      #{$block}__text--primary {
-      }
-      #{$block}__text__secondary {
-      }
-      #{$block}__text__tertiary {
-      }
-      #{$block}__p-mv__text__quaternary {
-      }
-    }
-
-    &--tab {
-      display: none;
-      @include responsive.responsive(md) {
-        display: block;
-      }
-      @include responsive.responsive(xl) {
-        display: none;
-      }
-      position: absolute;
-      left: 40px;
-      bottom: 210px;
-      @include font.gothic-bold;
-      font-size: rem.rem(30px);
-      letter-spacing: 0.15em;
-      line-height: 1;
-
-      #{$block}__text--primary {
-      }
-      #{$block}__text__secondary {
-      }
-      #{$block}__text__tertiary {
-      }
-    }
-
-    &--pc {
-      position: absolute;
-      left: 140px;
-      bottom: 300px;
-      @include font.gothic-bold;
-      font-size: rem.rem(35px);
-      letter-spacing: 0.15em;
-      line-height: 1;
-      #{$block}__text--primary {
-      }
-      #{$block}__text__secondary {
-      }
-    }
-  }
-
-  &__scroll {
-    position: absolute;
-    right: 63px;
-    bottom: 70px;
-    &__text {
-      position: relative;
-      @include font.DIN;
-      font-size: rem.rem(16px);
-      letter-spacing: 0.05em;
-      line-height: 1;
-      writing-mode: vertical-lr;
-
-      &::before {
-        content: "";
-        display: inline-block;
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    overflow: hidden;
+    #{$block}__message {
+      &--sp {
         position: absolute;
-        bottom: -35px;
-        left: 50%;
-        transform: translateY(50%);
-        width: 1px;
-        height: 50px;
-        background: #142474;
+        left: 40px;
+        bottom: 210px;
+        @include font.gothic-bold;
+        font-size: rem.rem(25px);
+        letter-spacing: 0.15em;
+        line-height: 1;
+
+        #{$block}__text--primary {
+        }
+        #{$block}__text__secondary {
+        }
+        #{$block}__text__tertiary {
+        }
+        #{$block}__p-mv__text__quaternary {
+        }
+      }
+
+      &--tab {
+        display: none;
+        @include responsive.responsive(md) {
+          display: block;
+        }
+        @include responsive.responsive(xl) {
+          display: none;
+        }
+        position: absolute;
+        left: 40px;
+        bottom: 210px;
+        @include font.gothic-bold;
+        font-size: rem.rem(30px);
+        letter-spacing: 0.15em;
+        line-height: 1;
+
+        #{$block}__text--primary {
+        }
+        #{$block}__text__secondary {
+        }
+        #{$block}__text__tertiary {
+        }
+      }
+
+      &--pc {
+        position: absolute;
+        left: 140px;
+        bottom: 300px;
+        @include font.gothic-bold;
+        font-size: rem.rem(35px);
+        letter-spacing: 0.15em;
+        line-height: 1;
+        #{$block}__text--primary {
+        }
+        #{$block}__text__secondary {
+        }
+      }
+    }
+    #{$block}__scroll {
+      position: absolute;
+      right: 63px;
+      bottom: 70px;
+      &__text {
+        position: relative;
+        @include font.DIN;
+        font-size: rem.rem(16px);
+        letter-spacing: 0.05em;
+        line-height: 1;
+        writing-mode: vertical-lr;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          bottom: -35px;
+          left: 50%;
+          transform: translateY(50%);
+          width: 1px;
+          height: 50px;
+          background: #142474;
+        }
       }
     }
   }

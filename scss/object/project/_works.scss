@@ -220,7 +220,7 @@
       }
 
       #{$block}__card-unit {
-        overflow: hidden;
+        // overflow: hidden;
         display: flex;
 
         width: calc(100vw - 100vw * 80 / 390);
@@ -232,23 +232,32 @@
           width: calc(100vw - 100vw * 380 / 1366);
         }
         .swiper-wrapper {
-          transform: translate3d(0, 0, 0) !important;
+          // padding-left: 800px;
+          // margin-left: auto;
+          // transform: translate3d(0, 0, 0) !important;
 
           width: calc(100vw - 100vw * 80 / 390);
-          // @include responsive.responsive(lg) {
-          //   width: calc(50% + 50vw - 100% * 240 / 960);
-          // }
+          @include responsive.responsive(lg) {
+            width: calc(50% + 50vw - 100% * 240 / 960);
+          }
           @include responsive.responsive(lg) {
             width: calc(100vw - 100vw * 380 / 1366);
           }
+        }
+
+        .add {
+          transform: translate3d(450, 0, 0) !important;
         }
         #{$block}__card {
           display: inline-block;
           width: calc(100% * 260 / 310) !important;
           width: calc(100vw * 260 / 390) !important;
+          margin-right: 20px;
 
           @include responsive.responsive(lg) {
             width: calc(100% * 400 / 986) !important;
+            width: calc(100vw * 400 / 1366) !important;
+            margin-right: 50px;
           }
           // @include responsive.responsive(xl) {
           //   width: calc(

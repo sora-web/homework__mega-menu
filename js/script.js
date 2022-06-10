@@ -28,13 +28,15 @@ $(function () {
 // swiper
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
-  slidesPerView: "auto",
-  centeredSlides: false,
+  offsetPxBefore: 1000,
+  centeredSlides: true,
   loop: true,
+
   watchSlidesVisibility: true,
   speed: 1000,
   slidesPerView: 1.2,
-  spaceBetween: 20,
+  // spaceBetween: 20,
+
   autoplay: {
     delay: 5000,
   },
@@ -42,19 +44,19 @@ const swiper = new Swiper(".swiper", {
     640: {
       autoplay: false,
       slidesPerView: 2.2,
-      spaceBetween: 50,
+      // spaceBetween: 50,
     },
     960: {
       autoplay: false,
       slidesPerView: 2.3,
-      spaceBetween: 50,
+      // spaceBetween: 50,
     },
   },
   pagination: {
     el: ".js_swiper_pagination",
   },
   navigation: {
-    nextEl: ".js_swiper_next",
+    nextEl: ".js_swiper-next",
     prevEl: ".js_swiper-prev",
   },
 });
