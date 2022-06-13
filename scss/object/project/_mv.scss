@@ -83,7 +83,12 @@
   width: 100%;
   height: calc(100vh + 160px);
   overflow: hidden;
-
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include responsive.responsive(lg) {
+    height: calc(100vh + 200px);
+  }
   &__inner {
     position: relative;
     width: 100%;

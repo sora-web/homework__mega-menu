@@ -229,7 +229,7 @@
         //   width: calc(50% + 50vw - 100% * 240 / 960);
         // }
         @include responsive.responsive(lg) {
-          width: calc(100vw - 100vw * 380 / 1366);
+          width: calc(100vw - 100vw * 390 / 1366);
         }
         .swiper-wrapper {
           // padding-left: 800px;
