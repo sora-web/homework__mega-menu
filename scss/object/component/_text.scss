@@ -6,58 +6,29 @@
 @use "../../utility/font" as font;
 
 .c-lead {
-  &--jp {
-    @include font.gothic;
-    font-size: rem.rem(15px);
-    letter-spacing: 0.06em;
-    line-height: 2;
+  @include font.mincho;
+  font-size: rem.rem(20px);
+  letter-spacing: 0em;
+  line-height: 1;
 
-    @include responsive.responsive(lg) {
-      font-size: rem.rem(15px);
-      letter-spacing: 0.06em;
-      line-height: 2;
-    }
+  @include responsive.responsive(xl) {
+    font-size: rem.rem(26px);
+    letter-spacing: 0em;
+    line-height: 1;
   }
 }
 
 .c-title {
-  &--en {
-    @include font.DIN;
-    font-size: rem.rem(12px);
-    letter-spacing: 0.05em;
-    line-height: 1;
-
-    @include responsive.responsive(lg) {
-      font-size: rem.rem(16px);
-      letter-spacing: 0.05em;
-      line-height: 1;
-    }
-  }
-  &--jp {
-    @include font.gothic-bold;
-    font-size: rem.rem(14px);
-    letter-spacing: 0.1em;
-    line-height: 1;
-
-    @include responsive.responsive(lg) {
-      font-size: rem.rem(17px);
-      letter-spacing: 0.1em;
-      line-height: 1;
-    }
-  }
+  @include font.mincho;
+  font-weight: 500;
+  font-size: rem.rem(18px);
+  letter-spacing: 0em;
+  line-height: 1;
 }
 
 .c-text {
-  &--jp {
-    @include font.gothic;
-    font-size: rem.rem(13px);
-    letter-spacing: 0.06em;
-    line-height: 2;
-
-    @include responsive.responsive(lg) {
-      font-size: rem.rem(15px);
-      letter-spacing: 0.06em;
-      line-height: 2;
-    }
-  }
+  @include font.mincho;
+  font-size: rem.rem(15px);
+  letter-spacing: 0em;
+  line-height: 1;
 }

@@ -67,7 +67,7 @@
           #{$block}__item {
             a {
               @include responsive.responsive(lg) {
-                @include font.DIN-bold;
+                // @include font.DIN-bold;
                 font-size: rem.rem(15px);
                 letter-spacing: 0.06em;
                 line-height: 1;
@@ -145,7 +145,7 @@
         #{$block}__item {
           a {
             display: inline-block;
-            @include font.DIN-bold;
+            // @include font.DIN-bold;
             font-size: rem.rem(15px);
             letter-spacing: 0.06em;
             line-height: 1;

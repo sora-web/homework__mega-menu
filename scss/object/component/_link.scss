@@ -1,0 +1,57 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-link {
+  $block: &;
+  &--centerline {
+    text-align: right;
+  }
+  &__anchor {
+    display: block;
+
+    @include font.minion;
+    font-size: rem.rem(21px);
+    letter-spacing: 0em;
+    line-height: 1;
+
+    &--centerline {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: calc(100%);
+        height: 1px;
+        background: #a29c00;
+        z-index: -2;
+      }
+      span {
+        background-color: #ffffff;
+      }
+    }
+
+    &--underline {
+      position: relative;
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: -13px;
+        left: 0;
+        width: 32px;
+        height: 1px;
+        background: #a29c00;
+
+        @include responsive.responsive(xl) {
+          bottom: -14px;
+          width: 32px;
+        }
+      }
+    }
+  }
+}

@@ -6,14 +6,8 @@
 @use "../../utility/font" as font;
 
 .c-logo {
-  @include font.DIN-bold;
-  font-size: rem.rem(16px);
-  letter-spacing: 0.02em;
+  @include font.expo;
+  font-size: rem.rem(19px);
+  letter-spacing: 0em;
   line-height: 1;
-  @include responsive.responsive(lg) {
-    font-size: rem.rem(16px);
-  }
-  @include responsive.responsive(xl) {
-    font-size: rem.rem(20px);
-  }
 }

@@ -99,7 +99,7 @@
         position: absolute;
         left: 40px;
         bottom: 210px;
-        @include font.gothic-bold;
+        // @include font.gothic-bold;
         font-size: rem.rem(25px);
         letter-spacing: 0.15em;
         line-height: 1;
@@ -125,7 +125,7 @@
         position: absolute;
         left: 40px;
         bottom: 210px;
-        @include font.gothic-bold;
+        // @include font.gothic-bold;
         font-size: rem.rem(30px);
         letter-spacing: 0.15em;
         line-height: 1;
@@ -142,7 +142,7 @@
         position: absolute;
         left: 140px;
         bottom: 300px;
-        @include font.gothic-bold;
+        // @include font.gothic-bold;
         font-size: rem.rem(35px);
         letter-spacing: 0.15em;
         line-height: 1;
@@ -158,7 +158,7 @@
       bottom: 70px;
       &__text {
         position: relative;
-        @include font.DIN;
+        // @include font.DIN;
         font-size: rem.rem(16px);
         letter-spacing: 0.05em;
         line-height: 1;
