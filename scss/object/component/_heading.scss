@@ -6,6 +6,8 @@
 @use "../../utility/font" as font;
 
 .c-heading {
+  &-num {
+  }
   &--en {
     @include font.DIN;
     font-size: rem.rem(24px);
