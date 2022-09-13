@@ -196,8 +196,9 @@ html {
   box-sizing: border-box;
 }
 html body {
-  color: #1a1a1a;
   position: relative;
+  flex-flow: column;
+  min-height: 100vh;
 }
 html body ::selection {
   background: #dae7f7;
@@ -30172,6 +30173,9 @@ padding
   max-width: 100%;
 }
 .l-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #020929;
@@ -31100,9 +31104,15 @@ padding
   align-items: flex-start;
   flex-direction: column;
 }
+@media screen and (min-width: 0) {
+  .p-works .p-works__inner .p-works__body .p-works__card-unit .p-works__card .p-works__card__body .p-works__card__list {
+    margin-bottom: -10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .p-works .p-works__inner .p-works__body .p-works__card-unit .p-works__card .p-works__card__body .p-works__card__list {
     flex-direction: row;
+    margin-bottom: 0;
   }
 }
 .p-works .p-works__inner .p-works__body .p-works__card-unit .p-works__card .p-works__card__body .p-works__card__list .p-works__card__item {
@@ -31181,26 +31191,6 @@ padding
 .p-contact .p-contact-top .p-contact__inner .p-contact__heading {
   position: relative;
   text-align: center;
-}
-.p-contact .p-contact-top .p-contact__inner .p-contact__heading::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 18px;
-  height: 12px;
-  background-image: url(../img/mail.svg);
-  background-size: cover;
-  vertical-align: middle;
-}
-@media screen and (min-width: 640px) {
-  .p-contact .p-contact-top .p-contact__inner .p-contact__heading::before {
-    top: -30px;
-    width: 27px;
-    height: 18px;
-  }
 }
 .p-contact .p-contact-top .p-contact__inner .p-contact__heading--en {
   color: #ffffff;
@@ -31306,26 +31296,6 @@ padding
 }
 .p-contact .p-contact-page .p-contact__inner .p-contact__heading {
   position: relative;
-}
-.p-contact .p-contact-page .p-contact__inner .p-contact__heading--en span::after {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  top: 13px;
-  left: 125px;
-  width: 18px;
-  height: 12px;
-  background-image: url(../img/mail-page.svg);
-  background-size: cover;
-  vertical-align: middle;
-}
-@media screen and (min-width: 640px) {
-  .p-contact .p-contact-page .p-contact__inner .p-contact__heading--en span::after {
-    top: 15x;
-    left: 200px;
-    width: 27px;
-    height: 18px;
-  }
 }
 .p-contact .p-contact-page .p-contact__inner .p-contact__body {
   width: 79.4871794872%;
@@ -31699,6 +31669,61 @@ padding
 @media screen and (min-width: 640px) {
   .p-works-page .p-works-page__inner .p-works-page__body .p-works-page__media:nth-of-type(2n) {
     margin-left: 0;
+  }
+}
+
+.p-thanks-page {
+  position: relative;
+}
+.p-thanks-page__wrapper {
+  background-color: rgba(20, 36, 116, 0.1);
+}
+.p-thanks-page .p-thanks-page__inner {
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-thanks-page .p-thanks-page__inner .p-thanks-page__heading {
+  position: relative;
+  color: #fff;
+}
+.p-thanks-page .p-thanks-page__inner .p-thanks-page__body {
+  width: 79.4871794872%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 640px) {
+  .p-thanks-page .p-thanks-page__inner .p-thanks-page__body {
+    width: 100%;
+    max-width: 900px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .p-thanks-page .p-thanks-page__inner .p-thanks-page__body .p-thanks-page__text {
+    width: 77.7777777778%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.p-thanks-page .p-thanks-page__inner .p-thanks-page__body .p-thanks-page__text .p-thanks-page__message {
+  font-family: yu-gothic-pr6n, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+@media screen and (min-width: 640px) {
+  .p-thanks-page .p-thanks-page__inner .p-thanks-page__body .p-thanks-page__text .p-thanks-page__message {
+    font-size: 1.0625rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
   }
 }
 

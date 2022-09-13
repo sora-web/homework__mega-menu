@@ -33,24 +33,6 @@
       #{$block}__heading {
         position: relative;
         text-align: center;
-        &::before {
-          position: absolute;
-          content: "";
-          display: inline-block;
-          top: -20px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 18px;
-          height: 12px;
-          background-image: url(../img/mail.svg);
-          background-size: cover;
-          vertical-align: middle;
-          @include responsive.responsive(lg) {
-            top: -30px;
-            width: 27px;
-            height: 18px;
-          }
-        }
         &--en {
           color: #ffffff;
         }
