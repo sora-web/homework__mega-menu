@@ -4,4 +4,19 @@
 @use "../utility/position" as center;
 
 .l-mv {
+  padding-bottom: 96px;
+  @include responsive.responsive(xl) {
+    padding-bottom: 246px;
+  }
+  //inner
+  &__inner {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include responsive.responsive(lg) {
+      // padding-right: 20px;
+      // padding-left: 20px;
+      // max-width: calc(1366px + 20px * 2);
+    }
+  }
 }
