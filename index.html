@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
-    <!--    <link rel="stylesheet" href="https://use.typekit.net/xmu3ejl.css"> -->
+       <!-- <link rel="stylesheet" href="https://use.typekit.net/xmu3ejl.css"> -->
     <title>Prostaff Victoria</title>
   </head>
 
@@ -88,18 +88,21 @@
       <div class="l-mv__inner">
         <div class="p-mv">
           <div class="p-mv__inner">
-            <div class="p-mv__img-area xs-mb25 xl-mb0">
+            <div class="p-mv__img-area xs-mb50 xl-mb0">
               <picture>
+                    <source srcset="./img/pc-mv@2x.jpg" media="(min-width: 640px)"/>
+                <source srcset="./img/sp-mv@2x.jpg" media="(min-width: 0px)"/>
+            
                 <img src="./img/pc-mv@2x.jpg" alt="" />
               <picture>
             </div>
             <div class="p-mv__text-area">
-              <div class="p-mv__message xs-mb25 xl-mb40">
-                <p class="xs-mb15"><span class="p-mv__message--initial">Y</span>OU CAN</p>
-                <p class="xs-mb15"><span class="p-mv__message--initial">B</span>E ANYTHING</p>
-                <p><span class="p-mv__message--initial">Y</span>OU LIKE</p>
+              <div class="p-mv__message xs-mb25 lg-mb40">
+                <p class="xs-mb15"><span class="u-initial-font-color--yellow">Y</span>OU CAN</p>
+                <p class="xs-mb15"><span class="u-initial-font-color--yellow">B</span>E ANYTHING</p>
+                <p><span class="u-initial-font-color--yellow">Y</span>OU LIKE</p>
               </div>
-              <div class="p-mv__lead xs-mb25 xl-mb40">
+              <div class="p-mv__lead xs-mb25 lg-mb40">
                 <p>あなたはまだ何にだってなれる。</p>
               </div>
               <div class="p-mv__desc">
@@ -112,51 +115,59 @@
       </div>
     </section>
     <!-- //mv -->
-    <!-- feature -->
-    <!-- <section class="l-cont l-cont--feature">
-  <div class="l-cont__inner l-cont--feature__inner">
-    <div class="p-feature">
-      <div class="p-feature__inner">
-        <div class="p-feature__heading xs-mb55 lg-mb0">
-          <h2 class="p-feature__heading--en c-heading c-heading--en xs-mb5 lg-mb10"><span>Feature</span></h2>
-          <p class="p-feature__heading--jp c-heading c-heading--jp">サービスの特徴</p>
-        </div>
-        <div class="p-feature__body">
-          <div class="p-feature__unit xs-mb50 xs-mb50">
-            <div class="p-feature__title xs-mb15">
-              <h3 class="p-feature__title--en c-title c-title--en xs-mb5 lg-mb10">Reproducibility</h3>
-              <p class="p-feature__title--jp c-title c-title--jp">デザイナーの要望を再現</p>
-            </div>
-            <p class="p-feature-text c-text c-text--jp">デザインデータを完全再現したサイト制作のほかに、お客様の要望に沿ったサイト制作を行います。</p>
+<!-- ourpromise -->
+<section class="l-cont">
+  <div class="l-cont__inner">
+    <div class="p-our-promise">
+      <div class="p-our-promise__inner">
+        <div class="p-our-promise__img-area xs-mb80 xl-mb0">
+          <div  class="p-our-promise__img--big">
+            <picture>
+              <source srcset="./img/pc-ourpromise--big@2x.jpg" media="(min-width: 640px)"/>
+              <source srcset="./img/sp-ourpromise--big@2x.jpg" media="(min-width: 0px)"/>
+              <img src="./img/pc-ourpromise--big@2x.jpg" alt="" />
+            <picture>
           </div>
-
-          <div class="p-feature__unit xs-mb50 xs-mb55">
-            <div class="p-feature__title xs-mb15">
-              <h3 class="p-feature__title--en c-title c-title--en xs-mb5 lg-mb10">Maintainability</h3>
-              <p class="p-feature__title--jp c-title c-title--jp">リリース後の修正も低コスト</p>
-            </div>
-            <p class="p-feature-text c-text c-text--jp">css設計に基づいたコーディングを行行います。そのため、あとから追加・更新する際に、修正がしやすいです。</p>
-          </div>
-
-          <div class="p-feature__unit">
-            <div class="p-feature__title xs-mb15">
-              <h3 class="p-feature__title--en c-title c-title--en xs-mb5 lg-mb10">With Confidence</h3>
-              <p class="p-feature__title--jp c-title c-title--jp">作業進捗は常に「見える化」</p>
-            </div>
-            <p class="p-feature-text c-text c-text--jp">スケジュールを立ててから、業務に取り組 みます。そうすることで、納期を守ります。</p>
+          <div class="p-our-promise__img--small">
+            <picture>
+              <source srcset="./img/pc-ourpromise--small@2x.jpg" media="(min-width: 640px)"/>
+              <source srcset="./img/sp-ourpromise--small@2x.jpg" media="(min-width: 0px)"/>
+              <img src="./img/pc-ourpromise--small@2x.jpg" alt="" />
+            <picture>
           </div>
         </div>
-        <div class="p-feature__round-unit xl-on">
-          <div class="p-feature__round">
-                <div class="p-feature__round__small"></div>
-                <div class="p-feature__round__large"></div>
+        <div class="p-our-promise__text-area">
+          <div class="c-heading xs-mb50 xl-mb65">
+            <div class="c-heading__sub">
+              <p class="c-heading__num">01.</p>
+              <p class="c-heading__jp">お約束</p>
+            </div>
+            <h2 class="c-heading__en">
+              <span class="u-initial-font-color--yellow">O</span>ur Promise
+            </h2>
+          </div>
+          <div class="p-our-promise__text-body">
+            <div class="c-lead xs-mb65 lg-mb75">
+              <p class="xs-mb15">働きたいあなたと</p>
+              <P>ともに歩むパートナーでありたい</P>
+            </div>
+            <div class="c-text xs-mb45 lg-mb70">
+              <p class="xs-mb20 lg-mb20">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            </div>
+            <div class="c-link c-link--centerline">
+              <a class="c-link__anchor c-link__anchor--centerline" href="/"
+                ><span class="span"><span class="u-initial-font-color--yellow">A</span>bout us</span></a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
-    <!-- //feature -->
+</section>
+
+<!-- //ourpromise -->
 
     <!-- <footer class="l-footer">
       <div class="l-footer__inner">

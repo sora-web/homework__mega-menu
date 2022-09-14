@@ -29,6 +29,6 @@
 .c-text {
   @include font.mincho;
   font-size: rem.rem(15px);
-  letter-spacing: 0em;
-  line-height: 1;
+  letter-spacing: 0.15em;
+  line-height: 2;
 }

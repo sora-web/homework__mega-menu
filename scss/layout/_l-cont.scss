@@ -8,15 +8,16 @@
   }
   //inner
   &__inner {
-    padding-right: vw.vw(20px);
-    padding-left: vw.vw(20px);
+    max-width: calc(1360px);
+    // padding-right: vw.vw(20px);
+    // padding-left: vw.vw(20px);
     margin-right: auto;
     margin-left: auto;
 
-    @include responsive.responsive(lg) {
-      padding-right: 20px;
-      padding-left: 20px;
-      max-width: calc(1360px + 80px * 2);
-    }
+    // @include responsive.responsive(lg) {
+    //   padding-right: 20px;
+    //   padding-left: 20px;
+    //   max-width: calc(1360px + 20px * 2);
+    // }
   }
 }

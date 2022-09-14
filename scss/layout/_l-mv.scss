@@ -6,6 +6,9 @@
 .l-mv {
   padding-bottom: 96px;
   @include responsive.responsive(xl) {
+    padding-bottom: 0;
+  }
+  @include responsive.responsive(xxl) {
     padding-bottom: 246px;
   }
   //inner
