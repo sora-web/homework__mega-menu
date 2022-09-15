@@ -1,0 +1,122 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+@use "../../utility/vw" as vw;
+
+.p-works {
+  $block: &;
+  .c-heading__sub {
+    justify-content: center;
+  }
+  .c-heading {
+    text-align: center;
+  }
+  &__inner {
+    position: relative;
+    z-index: -3;
+    margin-left: calc(100% * 10 / 390);
+    padding-top: 75px;
+    @include responsive.responsive(xl) {
+      margin-left: calc(100% * 20 / 1366);
+      padding-top: 140px;
+    }
+    #{$block}__cards {
+      @include responsive.responsive(xl) {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% * 1092 / 1366);
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    #{$block}__card {
+      &:nth-of-type(2) {
+        @include responsive.responsive(xl) {
+          padding-top: 212px;
+        }
+      }
+      margin-left: calc(100% * 20 / 390);
+      width: calc(100% * 370 / 390);
+
+      @include responsive.responsive(xl) {
+        margin-left: 0;
+        width: calc(100% * 464 / 1092);
+      }
+
+      #{$block}__head {
+        position: relative;
+        z-index: -2;
+        display: flex;
+        #{$block}__img-area {
+          width: calc(100% * 320 / 370);
+
+          @include responsive.responsive(xl) {
+            width: calc(100% * 412 / 464);
+          }
+        }
+        #{$block}__cat {
+          margin-left: 20px;
+          writing-mode: vertical-rl;
+          @include font.expo;
+          font-size: rem.rem(13px);
+          letter-spacing: 0.05em;
+          line-height: 1;
+
+          @include responsive.responsive(xl) {
+            font-size: rem.rem(18px);
+            letter-spacing: 0.05em;
+            line-height: 1;
+          }
+        }
+      }
+      #{$block}__body {
+        margin-top: calc(100% * (-67) / 360);
+        margin-left: calc(100% * (63) / 360);
+        padding-top: 50px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+        @include responsive.responsive(lg) {
+          margin-left: calc(50%);
+        }
+        @include responsive.responsive(xl) {
+          margin-left: calc(100% * 70 / 464);
+          padding-top: 55px;
+          padding-right: 30px;
+          padding-bottom: 55px;
+          padding-left: 30px;
+          width: calc(100% * 395 / 464);
+        }
+      }
+    }
+    #{$block}__link {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      background: #ffffff;
+      border-radius: 50% / 100% 100% 0 0;
+      width: 170px;
+      height: 85px;
+      text-align: center;
+      p {
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        @include font.expo;
+        font-size: rem.rem(21px);
+        letter-spacing: 0em;
+        line-height: 1;
+
+        @include responsive.responsive(xl) {
+          font-size: rem.rem(21px);
+          letter-spacing: 0em;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

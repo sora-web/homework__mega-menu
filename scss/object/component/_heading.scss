@@ -7,14 +7,6 @@
 
 .c-heading {
   $block: &;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  @include responsive.responsive(xl) {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  border-top: 1px solid #c6c6c6;
-  border-bottom: 1px solid #c6c6c6;
 
   &__sub {
     display: flex;
@@ -58,7 +50,11 @@
     @include font.minion;
     font-size: rem.rem(47px);
     letter-spacing: 0em;
-
+    @include responsive.responsive(lg) {
+      font-size: rem.rem(52px);
+      letter-spacing: 0em;
+      line-height: 1;
+    }
     @include responsive.responsive(xl) {
       font-size: rem.rem(58px);
       letter-spacing: 0em;

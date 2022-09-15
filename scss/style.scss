@@ -24,7 +24,7 @@
 //conponent
 @use "object/component/heading";
 @use "object/component/text";
-@use "object/component/background";
+
 @use "object/component/logo";
 @use "object/component/link";
 @use "object/component/btn";
@@ -41,8 +41,9 @@
 // @use "object/project/header";
 @use "object/project/mv";
 @use "object/project/our-promise";
-// @use "object/project/works";
-// @use "object/project/contact";
+@use "object/project/works";
+@use "object/project/business";
+@use "object/project/contact";
 // @use "object/project/footer";
 // @use "object/project/child-dentistry/contact-page";
 // @use "object/project/child-dentistry/about-us-page";

@@ -3,21 +3,36 @@
 @use "../utility/rem" as rem;
 
 .l-cont {
-  padding-bottom: 160px;
-  @include responsive.responsive(lg) {
-  }
   //inner
   &__inner {
     max-width: calc(1360px);
-    // padding-right: vw.vw(20px);
-    // padding-left: vw.vw(20px);
     margin-right: auto;
     margin-left: auto;
+  }
 
-    // @include responsive.responsive(lg) {
-    //   padding-right: 20px;
-    //   padding-left: 20px;
-    //   max-width: calc(1360px + 20px * 2);
-    // }
+  &--ourpromise {
+    padding-bottom: 290px;
+    @include responsive.responsive(lg) {
+      padding-bottom: 432px;
+    }
+  }
+
+  &--works {
+    padding-bottom: 325px;
+    @include responsive.responsive(lg) {
+      padding-bottom: 376px;
+    }
+  }
+  &--business {
+    padding-bottom: 180px;
+    @include responsive.responsive(lg) {
+      padding-bottom: 228px;
+    }
+  }
+  &--contact {
+    padding-bottom: 40px;
+    @include responsive.responsive(lg) {
+      padding-bottom: 70px;
+    }
   }
 }

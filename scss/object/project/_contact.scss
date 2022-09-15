@@ -8,98 +8,84 @@
 
 .p-contact {
   $block: &;
-  &-top__wrapper {
-    background-color: #071453;
-  }
-  #{$block}-top {
-    // position: relative;
-    // padding-top: 120px;
-    // padding-top: calc(100% * 80 / 791);
-    padding-top: 80px;
-    // padding-bottom: 120px;
-    // padding-bottom: calc(100% * 60 / 791);
-    padding-bottom: 60px;
-    width: 100%;
-
-    @include responsive.responsive(lg) {
-      padding-top: 160px;
-      padding-bottom: 160px;
-      // height: calc(100vh - 63px);
+  &__inner {
+    @include responsive.responsive(xl) {
+      position: relative;
     }
-    #{$block}__inner {
-      width: calc(100% * 310 / 390);
-      margin-left: auto;
+    #{$block}__img-area {
+      position: relative;
+      z-index: -2;
+      margin-bottom: calc(100% * (-180) / 390);
+      @include responsive.responsive(lg) {
+        margin-bottom: -26%;
+      }
+      @include responsive.responsive(xl) {
+        margin-bottom: 0;
+      }
+    }
+    #{$block}__text-area {
       margin-right: auto;
-      #{$block}__heading {
-        position: relative;
-        text-align: center;
-        &--en {
-          color: #ffffff;
-        }
-        &--jp {
-          color: #ffffff;
+      margin-left: auto;
+      width: calc(100% * 350 / 390);
+      max-width: 430px;
+      padding-top: 44px;
+      padding-right: 20px;
+      padding-bottom: 50px;
+      padding-left: 20px;
+      background: #fff;
+      opacity: 0.9;
+      @include responsive.responsive(xl) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% * 1100 / 1366);
+        max-width: none;
+        padding-top: 75px;
+        padding-right: 70px;
+        padding-bottom: 75px;
+        padding-left: 70px;
+      }
+      @include responsive.responsive(xxl) {
+        padding-top: 86px;
+        padding-right: 70px;
+        padding-bottom: 86px;
+        padding-left: 70px;
+      }
+      .c-heading {
+      }
+      #{$block}__message {
+        @include font.gothic;
+        font-weight: 500;
+        font-size: rem.rem(15px);
+        letter-spacing: 0em;
+        line-height: 1;
+        @include responsive.responsive(xl) {
+          font-size: rem.rem(19px);
         }
       }
-
       #{$block}__body {
-        @include responsive.responsive(lg) {
-          display: flex;
-          justify-content: space-between;
-          margin-left: auto;
-          margin-right: auto;
-          width: 100%;
-          max-width: 900px;
+        @include responsive.responsive(xl) {
+          width: 60%;
         }
-        #{$block}__primary {
-          @include responsive.responsive(lg) {
-            width: calc((100% - 50px / 2) / 2);
-          }
+        @include responsive.responsive(xxl) {
+          width: auto;
         }
-        #{$block}__secondary {
-          @include responsive.responsive(lg) {
-            width: calc((100% - 50px / 2) / 2);
-          }
+        #{$block}__text {
+          @include font.gothic;
+          font-weight: 500;
+          font-size: rem.rem(16px);
+          letter-spacing: 0em;
+          line-height: calc(27 / 16);
         }
-        #{$block}__item {
-          #{$block}__title {
-            @include font.gothic-bold;
-            font-size: rem.rem(14px);
-            letter-spacing: 0.1em;
-            line-height: 1;
-            color: #ffffff;
-
-            @include responsive.responsive(lg) {
-              font-size: rem.rem(17px);
-              letter-spacing: 0.1em;
-              line-height: 1;
-            }
-          }
-          #{$block}__textbox {
-            width: 100%;
-            height: 40px;
-            background-color: #ffffff;
-          }
-          #{$block}__textarea {
-            width: 100%;
-            height: 140px;
-            background-color: #ffffff;
-            @include responsive.responsive(lg) {
-              height: 240px;
-            }
-          }
-        }
-      }
-
-      #{$block}__btn-unit {
-        text-align: center;
-        #{$block}__btn {
+        .c-btn {
           padding-top: 20px;
           padding-bottom: 20px;
-          max-width: 100%;
-          width: 250px;
-
-          @include responsive.responsive(lg) {
-            width: 300px;
+          width: 100%;
+          @include responsive.responsive(xl) {
+            width: calc(100% * 344 / 563);
           }
         }
       }

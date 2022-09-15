@@ -28,33 +28,32 @@
   }
 }
 
-.p-btn {
-  width: 344px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.c-btn {
   &--arrow {
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
+    @include responsive.responsive(xl) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
 
-      vertical-align: middle;
-      right: 17px;
-      top: 13px;
-      width: 25px;
-      height: 1px;
-      background: #ffffff;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      right: 17px;
-      top: 10px;
-      width: 8px;
-      height: 0;
-      border-top: 1px solid #ffffff;
+        vertical-align: middle;
+        right: 17px;
+        top: 13px;
+        width: 25px;
+        height: 1px;
+        background: #ffffff;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        right: 17px;
+        top: 10px;
+        width: 8px;
+        height: 0;
+        border-top: 1px solid #ffffff;
 
-      transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
     }
   }
 }

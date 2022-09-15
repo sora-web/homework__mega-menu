@@ -19,7 +19,7 @@
 }
 
 .c-title {
-  @include font.mincho;
+  @include font.gothic;
   font-weight: 500;
   font-size: rem.rem(18px);
   letter-spacing: 0em;
@@ -27,7 +27,7 @@
 }
 
 .c-text {
-  @include font.mincho;
+  @include font.gothic;
   font-size: rem.rem(15px);
   letter-spacing: 0.15em;
   line-height: 2;
