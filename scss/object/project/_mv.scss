@@ -14,10 +14,8 @@
   &__inner {
     position: relative;
     width: 100%;
+    height: calc(100vh);
 
-    @include responsive.responsive(xl) {
-      height: calc(100vh);
-    }
     #{$block}__img-area {
       width: calc(100% * 370 / 390);
       margin-left: auto;

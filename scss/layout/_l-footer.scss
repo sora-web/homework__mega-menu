@@ -3,17 +3,13 @@
 @use "../utility/rem" as rem;
 
 .l-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  @include responsive.responsive(lg) {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  padding-bottom: 84px;
+  @include responsive.responsive(xl) {
+    padding-bottom: 47px;
   }
   &__inner {
-    @include responsive.responsive(xl) {
-    }
+    max-width: calc(1360px);
+    margin-right: auto;
+    margin-left: auto;
   }
 }

@@ -24,20 +24,18 @@
       padding-top: 140px;
     }
     #{$block}__cards {
-      @include responsive.responsive(xl) {
+      @include responsive.responsive(lg) {
         display: flex;
         justify-content: space-between;
-        width: calc(100% * 1092 / 1366);
+        width: 95%;
         margin-right: auto;
         margin-left: auto;
       }
+      @include responsive.responsive(xl) {
+        width: calc(100% * 1092 / 1366);
+      }
     }
     #{$block}__card {
-      &:nth-of-type(2) {
-        @include responsive.responsive(xl) {
-          padding-top: 212px;
-        }
-      }
       margin-left: calc(100% * 20 / 390);
       width: calc(100% * 370 / 390);
 
@@ -79,8 +77,9 @@
         padding-right: 25px;
         padding-bottom: 50px;
         padding-left: 25px;
+        background-color: #ffffff;
         @include responsive.responsive(lg) {
-          margin-left: calc(50%);
+          margin-left: calc(10%);
         }
         @include responsive.responsive(xl) {
           margin-left: calc(100% * 70 / 464);
@@ -90,6 +89,10 @@
           padding-left: 30px;
           width: calc(100% * 395 / 464);
         }
+      }
+      .c-text {
+        letter-spacing: 0.05em;
+        line-height: calc(24 / 15);
       }
     }
     #{$block}__link {
@@ -118,5 +121,11 @@
         }
       }
     }
+  }
+}
+
+.p-works__cards {
+  @include responsive.responsive(lg) {
+    display: flex;
   }
 }

@@ -7,17 +7,18 @@
 @use "../../utility/vw" as vw;
 
 .p-footer {
+  $block: &;
   text-align: center;
-  &__copyright {
-    @include font.DIN;
-    font-size: rem.rem(12px);
-    letter-spacing: 0.01em;
-    line-height: 1;
-    color: #ffffff;
 
-    @include responsive.responsive(lg) {
+  &__inner {
+    display: inline-block;
+    padding-top: 34px;
+    border-top: 1px solid #000;
+    max-width: 220px;
+    #{$block}__copyright {
+      @include font.minion;
       font-size: rem.rem(13px);
-      letter-spacing: 0.05em;
+      letter-spacing: 0em;
       line-height: 1;
     }
   }

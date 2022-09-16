@@ -41,18 +41,19 @@
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: calc(100% * 1100 / 1366);
         max-width: none;
         padding-top: 75px;
         padding-right: 70px;
         padding-bottom: 75px;
-        padding-left: 70px;
+        padding-left: 190px;
       }
       @include responsive.responsive(xxl) {
         padding-top: 86px;
         padding-right: 70px;
         padding-bottom: 86px;
-        padding-left: 70px;
+        padding-left: 100px;
       }
       .c-heading {
       }

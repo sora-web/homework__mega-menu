@@ -26,6 +26,7 @@
     }
     #{$block}__list {
       position: relative;
+      width: calc(100% * 651 / 712);
       &::after {
         content: "";
         display: inline-block;
@@ -52,20 +53,22 @@
     #{$block}__img-area {
       width: calc(100% * 130 / 350);
       @include responsive.responsive(xl) {
-        width: calc(100% * 172 / 722);
+        width: calc(100% * 172 / 651);
       }
     }
     #{$block}__text-area {
       width: calc(100% * 190 / 350);
       @include responsive.responsive(xl) {
-        width: calc(100% * 395 / 722);
+        width: calc(100% * 410 / 651);
       }
       #{$block}__heading {
+        position: relative;
         @include font.gothic;
         font-size: rem.rem(17px);
-        letter-spacing: 0.1em;
-        line-height: 1;
-        position: relative;
+        line-height: calc(29 / 17);
+        @include responsive.responsive(xl) {
+          line-height: 1;
+        }
         &::before {
           content: "";
           display: inline-block;
@@ -92,6 +95,7 @@
             flex-shrink: 0;
             margin-right: 20px;
             font-size: rem.rem(15px);
+            line-height: 1;
           }
           .c-text {
             font-size: rem.rem(14px);
@@ -103,7 +107,9 @@
             }
           }
           #{$block}__address {
-            line-height: 1;
+            @include responsive.responsive(md) {
+              line-height: 1;
+            }
           }
           #{$block}__desc {
             line-height: calc(24 / 14);
