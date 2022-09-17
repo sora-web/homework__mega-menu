@@ -12,8 +12,8 @@ $(".p-burger-view__close p").on("click", function () {
 });
 
 AOS.init({
-  offset: 100,
-  delay: 100,
-  duration: 500,
+  offset: 200,
+  delay: 400,
+  duration: 1500,
   easing: "ease-in",
 });

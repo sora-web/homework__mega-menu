@@ -16,25 +16,20 @@
     width: 100%;
 
     @include responsive.responsive(xxl) {
-      height: calc(100vh);
+      margin-right: auto;
+      margin-left: auto;
     }
 
     #{$block}__img-area {
       pointer-events: none;
       width: calc(100% * 370 / 390);
-      margin-left: auto;
+      margin-left: calc(100% * 453 / 1366);
       @include responsive.responsive(lg) {
         width: calc(100% * 500 / 640);
         width: 600px;
       }
       @include responsive.responsive(xxl) {
         width: calc(100% * 850 / 1366);
-        margin-left: 0;
-        margin-right: 0;
-        position: absolute;
-        top: 50%;
-        left: calc(100% * 453 / 1366);
-        transform: translateY(-50%);
       }
       img {
         object-fit: cover;
