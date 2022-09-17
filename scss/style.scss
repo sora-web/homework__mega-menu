@@ -24,11 +24,11 @@
 //conponent
 @use "object/component/heading";
 @use "object/component/text";
-
 @use "object/component/logo";
 @use "object/component/link";
 @use "object/component/btn";
 @use "object/component/table";
+@use "object/component/media";
 
 // layout
 @use "layout/l-header";
@@ -47,6 +47,6 @@
 @use "object/project/footer";
 
 @use "object/project/child-dentistry/about-us-page";
-// @use "object/project/child-dentistry/works-page";
+@use "object/project/child-dentistry/service-page";
 // @use "object/project/thanks";
 // @use "object/project/child-dentistry/contact-page";

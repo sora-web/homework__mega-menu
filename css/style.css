@@ -30380,6 +30380,13 @@ padding
   padding-bottom: 0;
 }
 
+@media screen and (min-width: 960px) {
+  .c-media {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
 .l-header {
   position: fixed;
   z-index: 5;
@@ -30465,11 +30472,11 @@ padding
 }
 
 .l-footer {
-  padding-bottom: 84px;
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 960px) {
   .l-footer {
-    padding-bottom: 47px;
+    padding-bottom: 40px;
   }
 }
 .l-footer__inner {
@@ -30488,12 +30495,12 @@ padding
     width: 80.5270863836%;
   }
 }
-.l-cont-page--heading {
+.l-cont-page--about-us-heading {
   padding-top: 176px;
   padding-bottom: 98px;
 }
 @media screen and (min-width: 960px) {
-  .l-cont-page--heading {
+  .l-cont-page--about-us-heading {
     padding-top: 252px;
     padding-bottom: 87px;
   }
@@ -30526,6 +30533,40 @@ padding
     width: 48.7272727273%;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+.l-cont-page--service-heading {
+  padding-top: 175px;
+  padding-bottom: 124px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--service-heading {
+    padding-top: 174px;
+    padding-bottom: 164px;
+  }
+}
+.l-cont-page--service-service {
+  padding-bottom: 108px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--service-service {
+    padding-bottom: 152px;
+  }
+}
+.l-cont-page--service-etc {
+  padding-bottom: 108px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--service-etc {
+    padding-bottom: 190px;
+  }
+}
+.l-cont-page--service-flow {
+  padding-bottom: 154px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--service-flow {
+    padding-bottom: 260px;
   }
 }
 
@@ -31196,7 +31237,7 @@ padding
     padding-top: 75px;
     padding-right: 70px;
     padding-bottom: 75px;
-    padding-left: 190px;
+    padding-left: 100px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -31282,6 +31323,120 @@ padding
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   line-height: 1;
+}
+
+.p-service .c-media:nth-of-type(2n + 1) {
+  flex-direction: row-reverse;
+}
+@media screen and (min-width: 960px) {
+  .p-service .c-media__img-area {
+    width: 38.4545454545%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-service .c-media__text-area {
+    width: 50.6363636364%;
+  }
+}
+
+.p-etc__item {
+  position: relative;
+  padding-left: 13px;
+  line-height: 1;
+}
+.p-etc__item::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 0.2em;
+  height: 0.2em;
+  background: #7c7c7c;
+}
+
+@media screen and (min-width: 960px) {
+  .p-flow__list {
+    width: 87.4545454545%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .p-flow__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.p-flow__item .p-flow__step {
+  font-family: minion-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.p-flow__item .p-flow__body {
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .p-flow__item .p-flow__body {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-flow__item .p-flow__body {
+    width: 86.7983367983%;
+  }
+}
+.p-flow__item .p-flow__body::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  height: 121.3541666667%;
+  width: 1px;
+  background: #a29c00;
+}
+@media screen and (min-width: 960px) {
+  .p-flow__item .p-flow__body::before {
+    top: 10px;
+    left: -36px;
+    height: 1px;
+    width: 17px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-flow__item .p-flow__body::before {
+    left: -36px;
+  }
+}
+.p-flow__item .p-flow__text-area {
+  margin-left: 11.4285714286%;
+}
+@media screen and (min-width: 960px) {
+  .p-flow__item .p-flow__text-area {
+    margin-left: 0;
+  }
+}
+.p-flow__item .p-flow__text-area .p-flow__title {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.p-flow__item .p-flow__text-area .p-flow__text {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-weight: 400;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  line-height: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,122 @@
+@use "../../../utility/flex" as flex;
+@use "../../../utility/responsive" as responsive;
+@use "../../../utility/position" as position;
+@use "../../../utility/align" as align;
+@use "../../../utility/rem" as rem;
+@use "../../../utility/font" as font;
+@use "../../../utility/vw" as vw;
+
+.p-service {
+  .c-media {
+    $block: &;
+
+    &:nth-of-type(2n + 1) {
+      flex-direction: row-reverse;
+    }
+    &__img-area {
+      @include responsive.responsive(xl) {
+        width: calc(100% * 423 / 1100);
+      }
+    }
+    &__text-area {
+      @include responsive.responsive(xl) {
+        width: calc(100% * 557 / 1100);
+      }
+    }
+  }
+}
+
+.p-etc {
+  &__item {
+    position: relative;
+    padding-left: 13px;
+    line-height: 1;
+    &::before {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      width: 0.2em;
+      height: 0.2em;
+      background: #7c7c7c;
+    }
+  }
+}
+
+.p-flow {
+  $block: &;
+
+  &__list {
+    @include responsive.responsive(xl) {
+      width: calc(100% * 962 / 1100);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &__item {
+    @include responsive.responsive(xl) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    #{$block}__step {
+      @include font.minion;
+      font-size: rem.rem(20px);
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+    #{$block}__body {
+      position: relative;
+      @include responsive.responsive(xl) {
+        width: calc(83%);
+      }
+      @include responsive.responsive(xxl) {
+        width: calc(100% * 835 / 962);
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 20px;
+        height: calc(100% * 233 / 192);
+        width: 1px;
+        background: #a29c00;
+
+        @include responsive.responsive(xl) {
+          top: 10px;
+          left: -36px;
+          height: 1px;
+          width: 17px;
+        }
+        @include responsive.responsive(xxl) {
+          left: -36px;
+        }
+      }
+    }
+    #{$block}__text-area {
+      margin-left: calc(100% * 40 / 350);
+      @include responsive.responsive(xl) {
+        margin-left: 0;
+      }
+      #{$block}__title {
+        @include font.mincho;
+        font-weight: 500;
+        font-size: rem.rem(18px);
+        letter-spacing: 0.05em;
+        line-height: 1;
+      }
+
+      #{$block}__text {
+        @include font.mincho;
+        font-weight: 500;
+        font-size: rem.rem(15px);
+        letter-spacing: 0.05em;
+        line-height: 2;
+      }
+    }
+  }
+}

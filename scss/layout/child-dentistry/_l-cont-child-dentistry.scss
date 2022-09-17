@@ -14,18 +14,17 @@
     }
   }
 
-  &--heading {
-    padding-top: 176px;
-    padding-bottom: 98px;
-    @include responsive.responsive(xl) {
-      padding-top: 252px;
-      padding-bottom: 87px;
-    }
-    &__inner {
-    }
-  }
-
   &--about-us {
+    &-heading {
+      padding-top: 176px;
+      padding-bottom: 98px;
+      @include responsive.responsive(xl) {
+        padding-top: 252px;
+        padding-bottom: 87px;
+      }
+      &__inner {
+      }
+    }
     &-greeting {
       padding-bottom: 117px;
       @include responsive.responsive(xl) {
@@ -50,6 +49,37 @@
           margin-right: auto;
           margin-left: auto;
         }
+      }
+    }
+  }
+  &--service {
+    &-heading {
+      padding-top: 175px;
+      padding-bottom: 124px;
+      @include responsive.responsive(xl) {
+        padding-top: 174px;
+        padding-bottom: 164px;
+      }
+      &__inner {
+      }
+    }
+    &-service {
+      padding-bottom: 108px;
+      @include responsive.responsive(xl) {
+        padding-bottom: 152px;
+      }
+    }
+
+    &-etc {
+      padding-bottom: 108px;
+      @include responsive.responsive(xl) {
+        padding-bottom: 190px;
+      }
+    }
+    &-flow {
+      padding-bottom: 154px;
+      @include responsive.responsive(xl) {
+        padding-bottom: 260px;
       }
     }
   }

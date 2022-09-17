@@ -1,0 +1,20 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-media {
+  $block: &;
+  @include responsive.responsive(xl) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #{$block}__img-area {
+  }
+
+  #{$block}__text-area {
+  }
+}

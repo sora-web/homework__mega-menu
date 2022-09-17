@@ -3,9 +3,9 @@
 @use "../utility/rem" as rem;
 
 .l-footer {
-  padding-bottom: 84px;
+  padding-bottom: 40px;
   @include responsive.responsive(xl) {
-    padding-bottom: 47px;
+    padding-bottom: 40px;
   }
   &__inner {
     max-width: calc(1360px);
