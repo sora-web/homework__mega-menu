@@ -14,9 +14,12 @@
   &__inner {
     position: relative;
     width: 100%;
-    height: calc(100vh);
+    @include responsive.responsive(xl) {
+      height: calc(100vh);
+    }
 
     #{$block}__img-area {
+      pointer-events: none;
       width: calc(100% * 370 / 390);
       margin-left: auto;
       @include responsive.responsive(lg) {

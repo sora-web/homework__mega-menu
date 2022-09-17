@@ -7,12 +7,13 @@
 
 .c-horizontal-table {
   $block: &;
-
+  pointer-events: none;
   &__inner {
     width: 100%;
     #{$block}__body {
       #{$block}__row {
         #{$block}__header {
+          pointer-events: none;
           padding-bottom: 27px;
 
           border-right: 1px solid #cecece;
@@ -20,6 +21,7 @@
           text-align: left;
         }
         #{$block}__text {
+          pointer-events: none;
           padding-bottom: 27px;
 
           line-height: 1.4;

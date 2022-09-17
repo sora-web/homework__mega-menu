@@ -26,7 +26,6 @@
     }
     #{$block}__list {
       position: relative;
-      width: calc(100% * 651 / 712);
       &::after {
         content: "";
         display: inline-block;
@@ -90,6 +89,7 @@
 
           @include responsive.responsive(xl) {
             display: flex;
+            align-items: flex-start;
           }
           .c-title {
             flex-shrink: 0;
@@ -98,22 +98,19 @@
             line-height: 1;
           }
           .c-text {
+            margin-top: -7px;
+            margin-bottom: -7px;
             font-size: rem.rem(14px);
             @include responsive.responsive(xl) {
               font-size: rem.rem(15px);
             }
-            &:nth-of-type(1) {
-              line-height: 1;
-            }
           }
-          #{$block}__address {
-            @include responsive.responsive(md) {
-              line-height: 1;
-            }
-          }
-          #{$block}__desc {
-            line-height: calc(24 / 14);
-          }
+          // #{$block}__address {
+          //   line-height: 1;
+          // }
+          // #{$block}__desc {
+          //   line-height: calc(24 / 14);
+          // }
         }
       }
     }

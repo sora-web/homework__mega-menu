@@ -24,7 +24,7 @@
         text-align: right;
         span {
           display: block;
-          height: 2px;
+          height: 1px;
           width: 33px;
           background-color: #707070;
           transition: 0.5s;
@@ -64,6 +64,7 @@
                 font-size: rem.rem(15px);
                 letter-spacing: 0em;
                 line-height: 1;
+                padding: 5px;
               }
             }
           }
@@ -98,19 +99,17 @@
 
 .p-burger-view {
   $block: &;
-
   position: fixed;
   top: 0;
-  left: -200%;
   z-index: 5;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
-
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  transition: all 1s;
+  display: none;
+  transition: opacity 1s linear;
 
   #{$block}__menu {
     @include position.center;
@@ -157,6 +156,6 @@
 }
 
 .is__open {
-  left: 0;
-  transition: all 1s;
+  display: block;
+  transition: all 1s linear;
 }

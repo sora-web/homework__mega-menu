@@ -15,12 +15,8 @@
     text-align: center;
   }
   &__inner {
-    position: relative;
-    z-index: -3;
-    margin-left: calc(100% * 10 / 390);
     padding-top: 75px;
     @include responsive.responsive(xl) {
-      margin-left: calc(100% * 20 / 1366);
       padding-top: 140px;
     }
     #{$block}__cards {
@@ -45,8 +41,6 @@
       }
 
       #{$block}__head {
-        position: relative;
-        z-index: -2;
         display: flex;
         #{$block}__img-area {
           width: calc(100% * 320 / 370);
@@ -68,9 +62,29 @@
             letter-spacing: 0.05em;
             line-height: 1;
           }
+
+          position: relative;
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 116px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 90px;
+            background: #707070;
+
+            @include responsive.responsive(xl) {
+              top: 165px;
+              height: 117px;
+            }
+          }
         }
       }
       #{$block}__body {
+        position: relative;
+        z-index: 1;
         margin-top: calc(100% * (-67) / 360);
         margin-left: calc(100% * (63) / 360);
         padding-top: 50px;
@@ -104,8 +118,9 @@
       border-radius: 50% / 100% 100% 0 0;
       width: 170px;
       height: 85px;
-      text-align: center;
-      p {
+
+      span {
+        text-align: center;
         position: absolute;
         top: 64px;
         width: 100%;

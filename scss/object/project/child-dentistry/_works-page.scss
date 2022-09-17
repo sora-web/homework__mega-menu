@@ -11,7 +11,9 @@
     @include responsive.responsive(xl) {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      width: calc(100% * 960 / 1100);
+      margin-right: auto;
+      margin-left: auto;
     }
 
     .c-page-title {

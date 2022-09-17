@@ -19,9 +19,13 @@
   &:focus,
   &:hover {
     transition: 0.3s;
-    color: #142474;
+    color: #a29c00;
     background-color: #ffffff;
-    border: 2px solid #142474;
+    border: 1px solid #a29c00;
+
+    &::before {
+      background: #a29c00;
+    }
   }
 
   &--arrow {
@@ -34,15 +38,20 @@
       position: relative;
       &::before {
         position: absolute;
-        content: "";
 
+        content: "";
         vertical-align: middle;
-        right: 17px;
+        right: 18px;
         top: 13px;
         width: 25px;
         height: 1px;
         background: #ffffff;
+        &:focus,
+        &:hover {
+          background: #a29c00;
+        }
       }
+
       &::after {
         position: absolute;
         content: "";
@@ -51,8 +60,16 @@
         width: 8px;
         height: 0;
         border-top: 1px solid #ffffff;
-
         transform: rotate(45deg);
+      }
+    }
+    &:focus,
+    &:hover {
+      &::before {
+        background: #a29c00;
+      }
+      &::after {
+        border-top: 1px solid #a29c00;
       }
     }
   }
