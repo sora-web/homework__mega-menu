@@ -1,0 +1,50 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-horizontal-table {
+  $block: &;
+
+  &__inner {
+    width: 100%;
+    #{$block}__body {
+      #{$block}__row {
+        #{$block}__header {
+          padding-bottom: 27px;
+
+          width: calc(100% * 100 / 350);
+          border-right: 1px solid #cecece;
+          line-height: 1.4;
+          text-align: left;
+
+          @include responsive.responsive(xl) {
+            width: calc(100% * 120 / 660);
+          }
+        }
+        #{$block}__text {
+          padding-bottom: 27px;
+
+          width: calc(100% * 250 / 350);
+          padding-left: 16px;
+          line-height: 1.4;
+
+          @include responsive.responsive(xl) {
+            padding-left: 35px;
+          }
+        }
+
+        &:last-child {
+          #{$block}__header {
+            padding-bottom: 0;
+          }
+          #{$block}__text {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

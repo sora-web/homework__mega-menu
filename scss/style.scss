@@ -28,6 +28,7 @@
 @use "object/component/logo";
 @use "object/component/link";
 @use "object/component/btn";
+@use "object/component/table";
 
 // layout
 @use "layout/l-header";
@@ -37,7 +38,6 @@
 @use "layout/child-dentistry/l-cont-child-dentistry";
 
 // //project
-
 @use "object/project/header";
 @use "object/project/mv";
 @use "object/project/our-promise";
@@ -45,7 +45,8 @@
 @use "object/project/business";
 @use "object/project/contact";
 @use "object/project/footer";
-// @use "object/project/child-dentistry/contact-page";
-// @use "object/project/child-dentistry/about-us-page";
+
+@use "object/project/child-dentistry/about-us-page";
 // @use "object/project/child-dentistry/works-page";
 // @use "object/project/thanks";
+// @use "object/project/child-dentistry/contact-page";

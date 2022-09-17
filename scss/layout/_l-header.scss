@@ -16,5 +16,12 @@
   &__inner {
     width: calc(100% * 350 / 390);
     margin: auto;
+
+    @include responsive.responsive(xl) {
+      width: calc(100%);
+      max-width: 1366px;
+      padding-left: 33px;
+      padding-right: 64px;
+    }
   }
 }

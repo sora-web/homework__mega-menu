@@ -30170,6 +30170,25 @@ padding
   }
 }
 
+.c-page-heading {
+  text-align: center;
+}
+.c-page-heading__jp {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: 0em;
+  line-height: 1;
+}
+.c-page-heading__en {
+  font-family: minion-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.375rem;
+  letter-spacing: 0em;
+  line-height: 1;
+}
+
 .c-lead {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   font-weight: 400;
@@ -30198,6 +30217,31 @@ padding
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 0.9375rem;
   letter-spacing: 0.15em;
+  line-height: 2;
+}
+
+.c-page-title__en {
+  font-family: minion-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+.c-page-title__jp {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.375rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.c-page-text {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
   line-height: 2;
 }
 
@@ -30303,6 +30347,39 @@ padding
   }
 }
 
+.c-horizontal-table__inner {
+  width: 100%;
+}
+.c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row .c-horizontal-table__header {
+  padding-bottom: 27px;
+  width: 28.5714285714%;
+  border-right: 1px solid #cecece;
+  line-height: 1.4;
+  text-align: left;
+}
+@media screen and (min-width: 960px) {
+  .c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row .c-horizontal-table__header {
+    width: 18.1818181818%;
+  }
+}
+.c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row .c-horizontal-table__text {
+  padding-bottom: 27px;
+  width: 71.4285714286%;
+  padding-left: 16px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 960px) {
+  .c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row .c-horizontal-table__text {
+    padding-left: 35px;
+  }
+}
+.c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row:last-child .c-horizontal-table__header {
+  padding-bottom: 0;
+}
+.c-horizontal-table__inner .c-horizontal-table__body .c-horizontal-table__row:last-child .c-horizontal-table__text {
+  padding-bottom: 0;
+}
+
 .l-header {
   position: fixed;
   z-index: 5;
@@ -30320,6 +30397,14 @@ padding
 .l-header__inner {
   width: 89.7435897436%;
   margin: auto;
+}
+@media screen and (min-width: 960px) {
+  .l-header__inner {
+    width: 100%;
+    max-width: 1366px;
+    padding-left: 33px;
+    padding-right: 64px;
+  }
 }
 
 .l-mv {
@@ -30393,28 +30478,54 @@ padding
   margin-left: auto;
 }
 
-.l-cont-page {
-  padding-top: 140px;
-  padding-bottom: 100px;
-}
-@media screen and (min-width: 640px) {
-  .l-cont-page {
-    padding-top: 160px;
-    padding-bottom: 200px;
-  }
-}
 .l-cont-page__inner {
-  padding-right: 5.3333333333vw;
-  padding-left: 5.3333333333vw;
+  width: 89.7435897436%;
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 640px) {
   .l-cont-page__inner {
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 100%;
-    max-width: 1520px;
+    width: 80.5270863836%;
+  }
+}
+.l-cont-page--heading {
+  padding-top: 176px;
+  padding-bottom: 98px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--heading {
+    padding-top: 252px;
+    padding-bottom: 87px;
+  }
+}
+.l-cont-page--about-us-greeting {
+  padding-bottom: 117px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--about-us-greeting {
+    padding-bottom: 140px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--about-us-greeting__inner {
+    width: 48.3162518302%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.l-cont-page--about-us-information {
+  padding-bottom: 210px;
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--about-us-information {
+    padding-bottom: 330px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .l-cont-page--about-us-information__inner {
+    width: 48.7272727273%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -31151,6 +31262,25 @@ padding
   font-style: normal;
   font-size: 0.8125rem;
   letter-spacing: 0em;
+  line-height: 1;
+}
+
+.p-representative {
+  display: flex;
+  justify-content: flex-end;
+}
+.p-representative__inner .p-representative__primary {
+  justify-content: flex-end;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+.p-representative__inner .p-representative__secondary {
+  display: flex;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
   line-height: 1;
 }
 

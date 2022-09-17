@@ -5,3 +5,28 @@
 @use "../../../utility/rem" as rem;
 @use "../../../utility/font" as font;
 @use "../../../utility/vw" as vw;
+
+.p-representative {
+  $block: &;
+  display: flex;
+  justify-content: flex-end;
+  &__inner {
+    #{$block}__primary {
+      justify-content: flex-end;
+      @include font.gothic;
+      font-size: rem.rem(14px);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+    #{$block}__secondary {
+      display: flex;
+      @include font.gothic;
+      font-size: rem.rem(14px);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+  }
+}
+
+.p-information {
+}

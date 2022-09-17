@@ -32,3 +32,27 @@
   letter-spacing: 0.15em;
   line-height: 2;
 }
+
+.c-page-title {
+  &__en {
+    @include font.minion;
+    font-size: rem.rem(16px);
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+  &__jp {
+    @include font.mincho;
+    font-weight: 500;
+    font-size: rem.rem(22px);
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+}
+
+.c-page-text {
+  @include font.gothic;
+  font-weight: 500;
+  font-size: rem.rem(16px);
+  letter-spacing: 0.05em;
+  line-height: 2;
+}
