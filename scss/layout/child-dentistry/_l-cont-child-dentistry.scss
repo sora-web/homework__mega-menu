@@ -83,4 +83,22 @@
       }
     }
   }
+  &--works {
+    &-heading {
+      padding-top: 160px;
+      padding-bottom: 192px;
+      @include responsive.responsive(xl) {
+        padding-top: 175px;
+        padding-bottom: 290px;
+      }
+      &__inner {
+      }
+    }
+    &-works {
+      padding-bottom: 248px;
+      @include responsive.responsive(xl) {
+        padding-bottom: 315px;
+      }
+    }
+  }
 }

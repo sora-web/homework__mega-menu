@@ -29,4 +29,18 @@
 }
 
 .p-information {
+  .c-horizontal-table__header {
+    width: calc(100% * 100 / 350);
+    @include responsive.responsive(xl) {
+      width: calc(100% * 120 / 660);
+    }
+  }
+  .c-horizontal-table__text {
+    width: calc(100% * 250 / 350);
+    padding-left: 16px;
+    @include responsive.responsive(xl) {
+      width: calc(100% * 540 / 660);
+      padding-left: 35px;
+    }
+  }
 }
