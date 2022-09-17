@@ -5,7 +5,7 @@
 .l-cont {
   //inner
   &__inner {
-    max-width: calc(1360px);
+    max-width: 1366px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -17,7 +17,7 @@
     }
   }
 
-  &--works {
+  &--service {
     padding-bottom: 325px;
     @include responsive.responsive(lg) {
       padding-bottom: 376px;

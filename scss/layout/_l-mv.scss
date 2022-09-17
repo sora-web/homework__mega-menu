@@ -7,21 +7,16 @@
   padding-top: 70px;
   padding-bottom: 96px;
   @include responsive.responsive(xl) {
-    padding-top: 0px;
-    padding-bottom: 0;
+    padding-top: 72px;
+    padding-bottom: 140px;
   }
   @include responsive.responsive(xxl) {
-    padding-bottom: 246px;
+    padding-top: 0px;
+    padding-bottom: 146px;
   }
   //inner
   &__inner {
     margin-right: auto;
     margin-left: auto;
-
-    @include responsive.responsive(lg) {
-      // padding-right: 20px;
-      // padding-left: 20px;
-      // max-width: calc(1366px + 20px * 2);
-    }
   }
 }

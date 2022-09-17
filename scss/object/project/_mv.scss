@@ -14,7 +14,8 @@
   &__inner {
     position: relative;
     width: 100%;
-    @include responsive.responsive(xl) {
+
+    @include responsive.responsive(xxl) {
       height: calc(100vh);
     }
 
@@ -26,7 +27,7 @@
         width: calc(100% * 500 / 640);
         width: 600px;
       }
-      @include responsive.responsive(xl) {
+      @include responsive.responsive(xxl) {
         width: calc(100% * 850 / 1366);
         margin-left: 0;
         margin-right: 0;
@@ -58,6 +59,7 @@
       font-size: rem.rem(38px);
       letter-spacing: 0em;
       line-height: 1;
+      color: #6f6f6f;
       @include responsive.responsive(md) {
         font-size: rem.rem(48px);
         letter-spacing: 0em;
@@ -77,6 +79,7 @@
       font-size: rem.rem(19px);
       letter-spacing: 0em;
       line-height: 1;
+      color: #6f6f6f;
       @include responsive.responsive(md) {
         font-size: rem.rem(20px);
         letter-spacing: 0em;
@@ -94,6 +97,7 @@
       font-size: rem.rem(14px);
       letter-spacing: 0em;
       line-height: 1;
+      color: #6f6f6f;
       @include responsive.responsive(md) {
         font-size: rem.rem(14px);
         letter-spacing: 0em;

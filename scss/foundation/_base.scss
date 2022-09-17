@@ -11,14 +11,14 @@ html {
     position: relative;
     flex-flow: column;
     min-height: 100vh;
-    color: #676767;
+    color: #505050;
 
     ::selection {
       background: #dae7f7;
     }
     a {
       text-decoration: none;
-      color: #242424;
+      color: #707070;
       transition: 0.3s;
 
       &:hover {

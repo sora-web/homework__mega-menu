@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
        <link rel="stylesheet" href="https://use.typekit.net/xmu3ejl.css">
     <title>Prostaff Victoria</title>
   </head>
@@ -43,7 +44,7 @@
                     <a href="works/index.html">works</a>
                   </li>
                   <li class="p-header__item">
-                    <a href="https://page.line.me/?accountId=048qmxdb">contact</a>
+                    <a href="https://page.line.me/?accountId=048qmxdb"  target="_blank" rel="noopener noreferrer">contact</a>
                   </li>
                 </ul>
               </div>
@@ -63,16 +64,16 @@
         <div class="p-burger-view__nav">
           <ul class="p-burger-view__list">
             <li class="p-burger-view__item xs-mb40">
-              <a href="about-us/index.html" class="">about us</a>
+              <a href="../about-us/index.html">about us</a>
             </li>
             <li class="p-burger-view__item xs-mb40">
-              <a href="service/index.html" class="">service</a>
+              <a href="../service/index.html">service</a>
             </li>
             <li class="p-burger-view__item xs-mb40">
-              <a href="works/index.html" class="">works</a>
+              <a href="../works/index.html">works</a>
             </li>
             <li class="p-burger-view__item">
-              <a href="https://page.line.me/?accountId=048qmxdb" class="">contact</a>
+              <a href="https://page.line.me/?accountId=048qmxdb" target="_blank" rel="noopener noreferrer">contact</a>
             </li>
           </ul>
         </div>
@@ -112,7 +113,7 @@
       </section>
       <!-- //mv -->
       <!-- ourpromise -->
-      <section class="l-cont l-cont--ourpromise">
+      <section class="l-cont l-cont--ourpromise" data-aos="fade-up">
         <div class="l-cont__inner l-cont--ourpromise__inner">
           <div class="p-our-promise">
             <div class="p-our-promise__inner">
@@ -165,10 +166,10 @@
       </section>
       <!-- //ourpromise -->
 
-      <!-- works -->
-      <section class="l-cont l-cont--works">
-        <div class="l-cont__inner l-cont--works__inner">
-          <div class="p-works">
+      <!-- service -->
+      <section class="l-cont l-cont--service" data-aos="fade-up">
+        <div class="l-cont__inner l-cont--service__inner">
+          <div class="p-service">
             <div class="c-heading xs-mb50 xl-mb85">
               <div class="c-heading__sub">
                 <p class="c-heading__num">02.</p>
@@ -178,20 +179,20 @@
                 <span class="u-initial-font-color--yellow">S</span>ervice
               </h2>
             </div>
-            <div class="p-works__inner u-bgc--gray">
-              <div class="p-works__cards xs-mb100 xl-mb110">
-                <div class="p-works__card xs-mb100 xl-mb0">
-                  <div class="p-works__head">
-                    <div class="p-works__img-area">
+            <div class="p-service__inner u-bgc--gray">
+              <div class="p-service__cards xs-mb100 xl-mb110">
+                <div class="p-service__card xs-mb100 xl-mb0">
+                  <div class="p-service__head">
+                    <div class="p-service__img-area">
                       <picture>
                         <source srcset="./img/pc-works--beauty@2x.jpg" media="(min-width: 640px)"/>
                         <source srcset="./img/sp-works--beauty@2x.jpg" media="(min-width: 0px)"/>
                         <img src="./img/pc-works--beauty@2x.jpg" alt="" />
                       <picture>
                     </div>
-                    <div class="p-works__cat"><p>Beauty adviser</p></div>
+                    <div class="p-service__cat"><p>Beauty adviser</p></div>
                   </div>
-                  <div class="p-works__body">
+                  <div class="p-service__body">
                     <div class="c-title xs-mb25"><p>ビューティーアドバイサー</p></div>
                     <div class="c-text">
                       <p class="xs-mb25">美容部員（びようぶいん）とも呼ばれる、お客様にコスメや化粧品をご紹介・販売するお仕事です。</p>
@@ -199,18 +200,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="p-works__card lg-mt100 xl-mt210">
-                  <div class="p-works__head">
-                    <div class="p-works__img-area">
+                <div class="p-service__card lg-mt100 xl-mt210">
+                  <div class="p-service__head">
+                    <div class="p-service__img-area">
                       <picture>
                         <source srcset="./img/pc-works--tasting@2x.jpg" media="(min-width: 640px)"/>
                         <source srcset="./img/sp-works--tasting@2x.jpg" media="(min-width: 0px)"/>
                         <img src="./img/pc-works--tasting@2x.jpg" alt="" />
                       <picture>
                     </div>
-                    <div class="p-works__cat"><p>Tasting sales</p></div>
+                    <div class="p-service__cat"><p>Tasting sales</p></div>
                   </div>
-                  <div class="p-works__body">
+                  <div class="p-service__body">
                     <div class="c-title xs-mb25"><p>食品試食販売員</p></div>
                     <div class="c-text">
                       <p class="xs-mb25">お客様に試食品をお配りして、商品をアピールし、購入をおすすめするお仕事です。</p>
@@ -219,19 +220,19 @@
                   </div>
                 </div>
               </div>
-              <div class="p-works__cards xs-mb100 xl-mb70">
-                <div class="p-works__card xs-mb100 xl-mb0">
-                  <div class="p-works__head">
-                    <div class="p-works__img-area">
+              <div class="p-service__cards xs-mb100 xl-mb70">
+                <div class="p-service__card xs-mb100 xl-mb0">
+                  <div class="p-service__head">
+                    <div class="p-service__img-area">
                       <picture>
                         <source srcset="./img/pc-works--apparel@2x.jpg" media="(min-width: 640px)"/>
                         <source srcset="./img/sp-works--apparel@2x.jpg" media="(min-width: 0px)"/>
                         <img src="./img/pc-works--apparel@2x.jpg" alt="" />
                       <picture>
                     </div>
-                    <div class="p-works__cat"><p>Apparel</p></div>
+                    <div class="p-service__cat"><p>Apparel</p></div>
                   </div>
-                  <div class="p-works__body">
+                  <div class="p-service__body">
                     <div class="c-title xs-mb25"><p>アパレルスタッフ</p></div>
                     <div class="c-text">
                       <p class="xs-mb25">お洋服やアクセサリーなどをお客様に対面で販売するお仕事です。</p>
@@ -239,18 +240,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="p-works__card lg-mt75 xl-mt155">
-                  <div class="p-works__head">
-                    <div class="p-works__img-area">
+                <div class="p-service__card lg-mt75 xl-mt155">
+                  <div class="p-service__head">
+                    <div class="p-service__img-area">
                       <picture>
                         <source srcset="./img/pc-works--event@2x.jpg" media="(min-width: 640px)"/>
                         <source srcset="./img/sp-works--event@2x.jpg" media="(min-width: 0px)"/>
                         <img src="./img/pc-works--event@2x.jpg" alt="" />
                       <picture>
                     </div>
-                    <div class="p-works__cat"><p>Event staff</p></div>
+                    <div class="p-service__cat"><p>Event staff</p></div>
                   </div>
-                  <div class="p-works__body">
+                  <div class="p-service__body">
                     <div class="c-title xs-mb25"><p>イベントスタッフ</p></div>
                     <div class="c-text">
                       <p class="xs-mb25">イベントスタッフイベント会場や催事場などで、お客様の対応、ご案内をするお仕事です。</p>
@@ -259,18 +260,18 @@
                   </div>
                 </div>
               </div>
-              <a href="service/index.html"  class="p-works__link"><span>Read More</span></a>
+              <a href="service/index.html" class="p-service__link"><span>Read More</span></a>
             </div>
           </div>
         </div>
       </section>
-      <!-- //works -->
+      <!-- //service -->
 
-      <!-- Business -->
-      <section class="l-cont l-cont--business">
+      <!-- works -->
+      <section class="l-cont l-cont--business" data-aos="fade-up">
         <div class="l-cont__inner l-cont__inner--business">
-          <div class="p-business">
-            <div class="p-business__inner">
+          <div class="p-works">
+            <div class="p-works__inner">
               <div class="c-heading xs-mb80 xl-mb0">
                 <div class="c-heading__sub">
                   <p class="c-heading__num">03.</p>
@@ -280,95 +281,95 @@
                   <span class="u-initial-font-color--yellow">W</span>orks
                 </h2>
               </div>
-              <div class="p-business__body">
-                <ul class="p-business__list">
+              <div class="p-works__body">
+                <ul class="p-works__list">
                   <!-- 1 -->
-                  <li class="p-business__item xs-mb100 xl-mb75">
-                    <div class="p-business__img-area">
+                  <li class="p-works__item xs-mb100 xl-mb75">
+                    <div class="p-works__img-area">
                       <picture>
                         <img src="./img/pc-business--shop.png" alt="" />
                       <picture>
                     </div>
-                    <div class="p-business__text-area">
-                      <div class="p-business__heading xs-mb40"><p>大手百貨店販売員</p></div>
-                      <div class="p-business__body-area">
-                        <ul class="p-business__body-area__list">
-                          <li class="p-business__body-area__item xs-mb25">
+                    <div class="p-works__text-area">
+                      <div class="p-works__heading xs-mb40"><p>大手百貨店販売員</p></div>
+                      <div class="p-works__body-area">
+                        <ul class="p-works__body-area__list">
+                          <li class="p-works__body-area__item xs-mb25">
                             <p class="c-title">勤務地</p>
-                            <p class="p-business__address c-text">横浜</p>
+                            <p class="p-works__address c-text">横浜</p>
                           </li>
-                          <li class="p-business__body-area__item">
+                          <li class="p-works__body-area__item">
                             <p class="c-title  xs-mb10">仕事内容</p>
-                            <p class="p-business__desc c-text">男性用肌着・パジャマ靴下等商品販売、店舗商品管理</p>
+                            <p class="p-works__desc c-text">男性用肌着・パジャマ靴下等商品販売、店舗商品管理</p>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </li>
                   <!-- 2 -->
-                  <li class="p-business__item xs-mb100 xl-mb75">
-                    <div class="p-business__img-area">
+                  <li class="p-works__item xs-mb100 xl-mb75">
+                    <div class="p-works__img-area">
                       <picture>
                         <img src="./img/pc-business--Woman.png" alt="" />
                       <picture>
                     </div>
-                    <div class="p-business__text-area">
-                      <div class="p-business__heading xs-mb40"><p>大手百貨店婦人靴販売員</p></div>
-                      <div class="p-business__body-area">
-                        <ul class="p-business__body-area__list">
-                          <li class="p-business__body-area__item xs-mb25">
+                    <div class="p-works__text-area">
+                      <div class="p-works__heading xs-mb40"><p>大手百貨店婦人靴販売員</p></div>
+                      <div class="p-works__body-area">
+                        <ul class="p-works__body-area__list">
+                          <li class="p-works__body-area__item xs-mb25">
                             <p class="c-title">勤務地</p>
-                            <p class="p-business__address c-text">銀座・浅草・池袋</p>
+                            <p class="p-works__address c-text">銀座・浅草・池袋</p>
                           </li>
-                          <li class="p-business__body-area__item">
+                          <li class="p-works__body-area__item">
                             <p class="c-title  xs-mb10">仕事内容</p>
-                            <p class="p-business__desc c-text">大手百貨店化粧売り場での販売員業務</p>
+                            <p class="p-works__desc c-text">大手百貨店化粧売り場での販売員業務</p>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </li>
                   <!-- 3 -->
-                  <li class="p-business__item xs-mb100 xl-mb75">
-                    <div class="p-business__img-area">
+                  <li class="p-works__item xs-mb100 xl-mb75">
+                    <div class="p-works__img-area">
                       <picture>
                         <img src="./img/pc-business--event.png" alt="" />
                       <picture>
                     </div>
-                    <div class="p-business__text-area">
-                      <div class="p-business__heading xs-mb40"><p>イベント・スーパーの試食・食品販売</p></div>
-                      <div class="p-business__body-area">
-                        <ul class="p-business__body-area__list">
-                          <li class="p-business__body-area__item xs-mb25">
+                    <div class="p-works__text-area">
+                      <div class="p-works__heading xs-mb40"><p>イベント・スーパーの試食・食品販売</p></div>
+                      <div class="p-works__body-area">
+                        <ul class="p-works__body-area__list">
+                          <li class="p-works__body-area__item xs-mb25">
                             <p class="c-title">勤務地</p>
-                            <p class="p-business__address c-text">千葉・埼玉・神奈川等</p>
+                            <p class="p-works__address c-text">千葉・埼玉・神奈川等</p>
                           </li>
-                          <li class="p-business__body-area__item">
+                          <li class="p-works__body-area__item">
                             <p class="c-title  xs-mb10">仕事内容</p>
-                            <p class="p-business__desc c-text">食品販売・販売のお手伝い</p>
+                            <p class="p-works__desc c-text">食品販売・販売のお手伝い</p>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </li>
                   <!-- 4 -->
-                  <li class="p-business__item xl-mb75 ">
-                    <div class="p-business__img-area">
+                  <li class="p-works__item xl-mb75 ">
+                    <div class="p-works__img-area">
                       <picture>
                         <img src="./img/pc-business--make.png" alt="" />
                       <picture>
                     </div>
-                    <div class="p-business__text-area">
-                      <div class="p-business__heading xs-mb40"><p>大手百貨店化粧品売り場販売員</p></div>
-                      <div class="p-business__body-area">
-                        <ul class="p-business__body-area__list">
-                          <li class="p-business__body-area__item xs-mb25">
+                    <div class="p-works__text-area">
+                      <div class="p-works__heading xs-mb40"><p>大手百貨店化粧品売り場販売員</p></div>
+                      <div class="p-works__body-area">
+                        <ul class="p-works__body-area__list">
+                          <li class="p-works__body-area__item xs-mb25">
                             <p class="c-title">勤務地</p>
-                            <p class="p-business__address c-text">都内近郊</p>
+                            <p class="p-works__address c-text">都内近郊</p>
                           </li>
-                          <li class="p-business__body-area__item">
+                          <li class="p-works__body-area__item">
                             <p class="c-title  xs-mb10">仕事内容</p>
-                            <p class="p-business__desc c-text">化粧品・健康商品をメインとした商品販売</p>
+                            <p class="p-works__desc c-text">化粧品・健康商品をメインとした商品販売</p>
                           </li>
                         </ul>
                       </div>
@@ -385,9 +386,9 @@
           </div>
         </div>
       </section>
-      <!-- //Business -->
+      <!-- //works -->
       <!-- contact -->
-      <section class="l-cont l-cont--contact">
+      <section class="l-cont l-cont--contact" data-aos="fade-up">
         <div class="l-cont__inner l-cont--contact__inner">
           <div class="p-contact">
             <div class="p-contact__inner">
@@ -407,7 +408,7 @@
                 </div>
                 <div class="p-contact__body">
                   <div class="p-contact__text xs-mb30 xl-mb40"><p>お仕事の応募お問い合わせはこちらから<br class="lg-on">LINEでかんたんにお問い合せできますので、お気軽にお問い合わせください。</p></div>
-                  <a href="https://page.line.me/?accountId=048qmxdb" class="c-btn c-btn--arrow">LINE問い合わせ</a>
+                  <a href="https://page.line.me/?accountId=048qmxdb" target="_blank" rel="noopener noreferrer" class="c-btn c-btn--arrow">LINE問い合わせ</a>
                 </div>
               </div>
             </div>
@@ -431,6 +432,7 @@
 
     <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <!-- //js -->
   </body>

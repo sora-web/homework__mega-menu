@@ -24,11 +24,19 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: 0;
-        width: calc(100%);
+        left: -70px;
+        width: 85%;
         height: 1px;
-        background: #a29c00;
+        background: #707070;
         z-index: -2;
+        transition-duration: 1s;
+      }
+      &:focus,
+      &:hover {
+        &::before {
+          transition-duration: 1s;
+          transform: translateX(70px);
+        }
       }
       span {
         background-color: #ffffff;

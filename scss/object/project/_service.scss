@@ -1,0 +1,153 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+@use "../../utility/vw" as vw;
+
+.p-service {
+  $block: &;
+  .c-heading__sub {
+    justify-content: center;
+  }
+  .c-heading {
+    text-align: center;
+  }
+  &__inner {
+    padding-top: 75px;
+    @include responsive.responsive(xl) {
+      padding-top: 140px;
+    }
+    #{$block}__cards {
+      @include responsive.responsive(lg) {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @include responsive.responsive(xl) {
+        width: calc(100% * 1092 / 1366);
+      }
+    }
+    #{$block}__card {
+      margin-left: calc(100% * 20 / 390);
+      width: calc(100% * 370 / 390);
+
+      @include responsive.responsive(xl) {
+        margin-left: 0;
+        width: calc(100% * 464 / 1092);
+      }
+
+      #{$block}__head {
+        display: flex;
+        #{$block}__img-area {
+          width: calc(100% * 320 / 370);
+
+          @include responsive.responsive(xl) {
+            width: calc(100% * 412 / 464);
+          }
+        }
+        #{$block}__cat {
+          margin-left: 20px;
+          writing-mode: vertical-rl;
+          @include font.expo;
+          font-size: rem.rem(13px);
+          letter-spacing: 0.05em;
+          line-height: 1;
+
+          @include responsive.responsive(xl) {
+            font-size: rem.rem(18px);
+            letter-spacing: 0.05em;
+            line-height: 1;
+          }
+
+          position: relative;
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 116px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 90px;
+            background: #707070;
+
+            @include responsive.responsive(xl) {
+              top: 165px;
+              height: 117px;
+            }
+          }
+        }
+      }
+      #{$block}__body {
+        position: relative;
+        z-index: 1;
+        margin-top: calc(100% * (-67) / 360);
+        margin-left: calc(100% * (63) / 360);
+        padding-top: 50px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+        background-color: #ffffff;
+        @include responsive.responsive(lg) {
+          margin-left: calc(10%);
+        }
+        @include responsive.responsive(xl) {
+          margin-left: calc(100% * 70 / 464);
+          padding-top: 55px;
+          padding-right: 30px;
+          padding-bottom: 55px;
+          padding-left: 30px;
+          width: calc(100% * 395 / 464);
+        }
+      }
+      .c-text {
+        letter-spacing: 0.05em;
+        line-height: calc(24 / 15);
+      }
+    }
+    #{$block}__link {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      background: #ffffff;
+      border-radius: 50% / 100% 100% 0 0;
+      width: 170px;
+      height: 85px;
+
+      span {
+        padding-bottom: 14px;
+        text-align: center;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        @include font.expo;
+        font-size: rem.rem(21px);
+        letter-spacing: 0em;
+        line-height: 1;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          width: 32px;
+          height: 1px;
+          background: #a29c00;
+        }
+
+        &:focus,
+        &:hover {
+          &::before {
+            transition-duration: 1s;
+            transform: translateX(200%);
+          }
+        }
+      }
+    }
+  }
+}
