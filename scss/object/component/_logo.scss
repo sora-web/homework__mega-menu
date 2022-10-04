@@ -6,7 +6,6 @@
 @use "../../utility/font" as font;
 
 .c-logo {
-  @include font.expo;
   font-size: rem.rem(19px);
   letter-spacing: 0.05em;
   line-height: 1;

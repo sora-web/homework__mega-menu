@@ -2,24 +2,3 @@
 @use "../variables/lists" as list;
 @use "../utility/responsive" as resposive;
 @use "../utility/rem" as rem;
-
-@mixin mincho {
-  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
-  font-weight: 400;
-}
-
-@mixin gothic {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-}
-
-@mixin minion {
-  font-family: minion-pro, serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@mixin expo {
-  font-family: expo-serif-pro, serif;
-  font-weight: 400;
-  font-style: normal;
-}

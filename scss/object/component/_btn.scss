@@ -7,24 +7,24 @@
 
 .c-btn {
   display: inline-block;
-  @include font.mincho;
+
   font-size: rem.rem(16px);
   letter-spacing: 0em;
   line-height: 1;
   color: #ffffff;
-  background-color: #a29c00;
+  background-color: #81f785;
   border: 1px solid transparent;
   text-align: center;
 
   &:focus,
   &:hover {
     transition: 0.3s;
-    color: #a29c00;
+    color: #81f785;
     background-color: #ffffff;
-    border: 1px solid #a29c00;
+    border: 1px solid #81f785;
 
     &::before {
-      background: #a29c00;
+      background: #81f785;
     }
   }
 
@@ -48,7 +48,7 @@
         background: #ffffff;
         &:focus,
         &:hover {
-          background: #a29c00;
+          background: #81f785;
         }
       }
 
@@ -59,7 +59,7 @@
         top: 45%;
         width: 8px;
         height: 0;
-        border-top: 1px solid #ffffff;
+        border-top: 1px solid #81f785;
         transform: rotate(45deg);
       }
     }
@@ -69,7 +69,7 @@
         background: #a29c00;
       }
       &::after {
-        border-top: 1px solid #a29c00;
+        border-top: 1px solid #81f785;
       }
     }
   }

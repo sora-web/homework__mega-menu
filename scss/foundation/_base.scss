@@ -11,15 +11,17 @@ html {
     position: relative;
     flex-flow: column;
     min-height: 100vh;
-    color: #505050;
+    color: #000;
+    font-family: "Inter", sans-serif;
 
     ::selection {
       background: #dae7f7;
     }
     a {
       text-decoration: none;
-      color: #707070;
+      color: #000;
       transition: 0.3s;
+      font-family: "Inter", sans-serif;
 
       &:hover {
         transition: 0.3s;

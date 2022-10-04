@@ -23,12 +23,13 @@
     #{$block}__img-area {
       pointer-events: none;
       width: calc(100% * 370 / 390);
-      margin-left: calc(100% * 453 / 1366);
+      margin-left: auto;
       @include responsive.responsive(lg) {
-        width: calc(100% * 500 / 640);
-        width: 600px;
+        width: 60%;
+        margin-right: 6%;
       }
       @include responsive.responsive(xxl) {
+        margin-right: calc(100% * 64 / 1366);
         width: calc(100% * 850 / 1366);
       }
       img {
@@ -50,7 +51,6 @@
       }
     }
     #{$block}__message {
-      @include font.minion;
       font-size: rem.rem(38px);
       letter-spacing: 0em;
       line-height: 1;
@@ -70,7 +70,6 @@
       }
     }
     #{$block}__lead {
-      @include font.mincho;
       font-size: rem.rem(19px);
       letter-spacing: 0em;
       line-height: 1;
@@ -88,7 +87,7 @@
     }
     #{$block}__desc {
       display: inline-block;
-      @include font.mincho;
+
       font-size: rem.rem(14px);
       letter-spacing: 0em;
       line-height: 1;

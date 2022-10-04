@@ -4,38 +4,3 @@
 @use "../../utility/align" as align;
 @use "../../utility/rem" as rem;
 @use "../../utility/font" as font;
-
-.c-horizontal-table {
-  $block: &;
-  pointer-events: none;
-  &__inner {
-    width: 100%;
-    #{$block}__body {
-      #{$block}__row {
-        #{$block}__header {
-          pointer-events: none;
-          padding-bottom: 27px;
-
-          border-right: 1px solid #cecece;
-          line-height: 1.4;
-          text-align: left;
-        }
-        #{$block}__text {
-          pointer-events: none;
-          padding-bottom: 27px;
-
-          line-height: 1.4;
-        }
-
-        &:last-child {
-          #{$block}__header {
-            padding-bottom: 0;
-          }
-          #{$block}__text {
-            padding-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
