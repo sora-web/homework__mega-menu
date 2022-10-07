@@ -1,0 +1,15 @@
+@use "../variables/breakpoints" as breakpoints;
+@use "../variables/lists" as list;
+@use "../utility/responsive" as resposive;
+
+.u-initial-font-color {
+  &--yellow {
+    color: #a29c00;
+  }
+}
+
+.u-bgc {
+  &--gray {
+    background-color: #f2f2f2;
+  }
+}

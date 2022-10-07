@@ -1,0 +1,45 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  body {
+    position: relative;
+    flex-flow: column;
+    min-height: 100vh;
+    color: #000;
+    font-family: "Inter", sans-serif;
+
+    ::selection {
+      background: #dae7f7;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      transition: 0.3s;
+      font-family: "Inter", sans-serif;
+
+      &:hover {
+        transition: 0.3s;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

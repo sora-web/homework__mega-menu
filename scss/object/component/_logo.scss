@@ -1,0 +1,16 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-logo {
+  font-size: rem.rem(19px);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #505050;
+  a {
+    padding: 10px;
+  }
+}

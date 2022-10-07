@@ -1,0 +1,309 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+@use "../../utility/vw" as vw;
+
+.p-header {
+  $block: &;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #{$block}__logo {
+    }
+    //listとbtnを横並び
+    #{$block}__nav {
+      display: flex;
+      align-items: center;
+      //itemを横並び
+      #{$block}__list {
+        display: flex;
+        align-items: center;
+
+        #{$block}__item {
+          a {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: rem.rem(15px);
+            letter-spacing: 0em;
+            line-height: 1;
+          }
+          &--arrow {
+            a {
+              position: relative;
+              &::after {
+                position: absolute;
+                content: "";
+                vertical-align: middle;
+                right: -10px;
+                top: 40%;
+                width: 8px;
+                height: 8px;
+
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: rotate(135deg);
+                transition: 1s;
+              }
+              &:hover {
+                &::after {
+                  top: 40%;
+                  transform: rotate(-45deg);
+                }
+              }
+            }
+          }
+        }
+      }
+      #{$block}__btn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 188px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.p-header-contents {
+  $contents: &;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 130px;
+
+  &__inner {
+    width: calc(100% * 1360 / 1440);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__heading {
+    font-size: rem.rem(32px);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  #{$contents}__body {
+    display: flex;
+    justify-content: space-between;
+
+    #{$contents}__area {
+      width: 23%;
+      word-wrap: break-word;
+      p {
+        font-size: rem.rem(18px);
+        letter-spacing: 0.05em;
+        line-height: 1.3;
+      }
+      #{$contents}__title {
+        font-size: rem.rem(24px);
+        letter-spacing: 0.05em;
+        line-height: 1;
+
+        //下線
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          width: calc(100%);
+          height: 1px;
+          background: #000;
+        }
+      }
+      #{$contents}__list {
+        #{$contents}__item {
+          padding-left: 50px;
+          font-size: rem.rem(18px);
+          letter-spacing: 0.05em;
+          line-height: 1;
+          position: relative;
+          //矢印
+          &::before {
+            position: absolute;
+            content: "";
+            vertical-align: middle;
+            left: 4px;
+            top: 50%;
+            width: 25px;
+            height: 1px;
+            background: #000;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            vertical-align: middle;
+            left: 22px;
+            top: 31%;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &--half {
+        width: 50%;
+      }
+      #{$contents}__media {
+        display: flex;
+        justify-content: space-between;
+        #{$contents}__img-wrapper {
+          width: 20%;
+        }
+        #{$contents}__text-wrapper {
+          width: 75%;
+        }
+        &:nth-child(1) {
+          position: relative;
+          &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: calc(100%);
+            height: 1px;
+            background: #000;
+          }
+        }
+      }
+    }
+  }
+
+  transform: scaleY(0); /*デフォルトでは非表示の状態にしておく*/
+  transform-origin: center top; /*変形を適応する基準をtopとする*/
+  transition: all 0.3s; /*表示の変化を0.3秒に指定*/
+}
+
+.p-header-contents__inner {
+  transform: scaleY(0); /*デフォルトでは非表示の状態にしておく*/
+  transform-origin: center top; /*変形を適応する基準をtopとする*/
+  transition: all 0.3s;
+}
+.p-header__item:hover {
+  .p-header-contents {
+    transform: scaleY(1); /*Gナビメニューにホバーしたら表示*/
+    transition: all 1s; /*表示の変化を0.3秒に指定*/
+  }
+  .p-header-contents__inner {
+    transform: scaleY(1); /*Gナビメニューにホバーしたら表示*/
+    transition: all 1s;
+    transition-delay: 0.4s;
+  }
+}
+
+.is__hover {
+  &::after {
+    transform: rotate(-45deg) !important;
+  }
+}
+
+//
+//
+//ハンバーガーメニュー//
+//
+//
+
+.c-burger {
+  z-index: 5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  span {
+    display: block;
+    height: 1px;
+    width: 30px;
+    background-color: #000;
+
+    &:nth-child(1) {
+      margin-bottom: 8px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 8px;
+    }
+  }
+}
+//開いたとき（is__activeの有無で管理）
+.is__active {
+  span {
+    &:nth-child(1) {
+      margin-bottom: 0;
+      transform: rotate(30deg) translate(0px, 2px);
+      transition: 0.3s;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      margin-bottom: 0;
+      transition: 0.3s;
+    }
+    &:nth-child(3) {
+      margin-bottom: 0;
+      transform: rotate(-30deg) translate(0px, 0px);
+      transition: 0.3s;
+    }
+  }
+}
+
+.c-burger-view {
+  $block: &;
+
+  //左に隠れている
+  position: fixed;
+  top: 0;
+  left: -200%;
+  z-index: 3;
+
+  //画面全体をc-burger-viewにする
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  transition: all 1s;
+
+  #{$block}__menu {
+    @include position.center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    #{$block}__nav {
+      #{$block}__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #{$block}__item {
+          a {
+          }
+        }
+      }
+
+      #{$block}__btn {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 188px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.is__open {
+  left: 0;
+  transition: all 0.6s;
+}
+
+.c-bgc {
+  background-color: rgba(129, 247, 133, 0.3);
+}

@@ -1,0 +1,76 @@
+@use "../../utility/flex" as flex;
+@use "../../utility/responsive" as responsive;
+@use "../../utility/position" as position;
+@use "../../utility/align" as align;
+@use "../../utility/rem" as rem;
+@use "../../utility/font" as font;
+
+.c-btn {
+  display: inline-block;
+
+  font-size: rem.rem(16px);
+  letter-spacing: 0em;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #81f785;
+  border: 1px solid transparent;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    transition: 0.3s;
+    color: #81f785;
+    background-color: #ffffff;
+    border: 1px solid #81f785;
+
+    &::before {
+      background: #81f785;
+    }
+  }
+
+  &--arrow {
+  }
+}
+
+.c-btn {
+  &--arrow {
+    @include responsive.responsive(xl) {
+      position: relative;
+      &::before {
+        position: absolute;
+
+        content: "";
+        vertical-align: middle;
+        right: 18px;
+        top: 50%;
+        width: 25px;
+        height: 1px;
+        background: #ffffff;
+        &:focus,
+        &:hover {
+          background: #81f785;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: 17px;
+        top: 45%;
+        width: 8px;
+        height: 0;
+        border-top: 1px solid #81f785;
+        transform: rotate(45deg);
+      }
+    }
+    &:focus,
+    &:hover {
+      &::before {
+        background: #a29c00;
+      }
+      &::after {
+        border-top: 1px solid #81f785;
+      }
+    }
+  }
+}
