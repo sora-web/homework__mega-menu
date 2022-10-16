@@ -27,35 +27,38 @@
         #{$block}__item {
           a {
             display: block;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 46px;
+            padding-bottom: 44px;
             padding-left: 5px;
             padding-right: 5px;
-            font-size: rem.rem(15px);
+            font-size: rem.rem(17px);
             letter-spacing: 0em;
             line-height: 1;
           }
           &--arrow {
+            padding-right: 15px;
             a {
               position: relative;
               &::after {
                 position: absolute;
                 content: "";
-                vertical-align: middle;
-                right: -10px;
-                top: 40%;
-                width: 8px;
+                top: 47%;
+                right: -6px;
+                display: block;
+                width: 5px;
                 height: 8px;
-
-                border-top: 1px solid #000;
-                border-right: 1px solid #000;
-                transform: rotate(135deg);
-                transition: 1s;
+                background-image: url(../../img/arrow.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: rotate(90deg);
+                transition: 0.3s;
+                transform-origin: center center;
               }
               &:hover {
                 &::after {
-                  top: 40%;
-                  transform: rotate(-45deg);
+                  transform: rotate(-90deg);
+                  transition: 0.3s;
+                  transform-origin: center center;
                 }
               }
             }
@@ -63,10 +66,51 @@
         }
       }
       #{$block}__btn {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 188px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-left: 25px;
+        padding-right: 77px;
         border-radius: 10px;
+        text-align: left;
+
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          vertical-align: middle;
+          right: 24px;
+          top: 50%;
+          width: 12px;
+          height: 1px;
+          background: #ffffff;
+          &:focus,
+          &:hover {
+            background: #81f785;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          right: 24px;
+          top: 45%;
+          width: 6px;
+          height: 6px;
+          border-top: 1px solid #fff;
+          border-right: 1px solid #fff;
+          transform: rotate(45deg);
+        }
+
+        &:focus,
+        &:hover {
+          &::before {
+            background: #81f785;
+          }
+          &::after {
+            border-top: 1px solid #81f785;
+            border-right: 1px solid #81f785;
+          }
+        }
       }
     }
   }
@@ -78,10 +122,10 @@
   top: 100%;
   left: 0;
   width: 100%;
-  padding-top: 70px;
-  padding-bottom: 130px;
 
   &__inner {
+    padding-top: 70px;
+    padding-bottom: 130px;
     width: calc(100% * 1360 / 1440);
     margin-right: auto;
     margin-left: auto;
@@ -99,11 +143,11 @@
     #{$contents}__area {
       width: 23%;
       word-wrap: break-word;
-      p {
-        font-size: rem.rem(18px);
-        letter-spacing: 0.05em;
-        line-height: 1.3;
-      }
+
+      font-size: rem.rem(18px);
+      letter-spacing: 0.05em;
+      line-height: 1.3;
+
       #{$contents}__title {
         font-size: rem.rem(24px);
         letter-spacing: 0.05em;
@@ -135,7 +179,7 @@
             content: "";
             vertical-align: middle;
             left: 4px;
-            top: 50%;
+            top: 6.5px;
             width: 25px;
             height: 1px;
             background: #000;
@@ -144,8 +188,8 @@
             position: absolute;
             content: "";
             vertical-align: middle;
-            left: 22px;
-            top: 31%;
+            left: 21px;
+            top: 3px;
             width: 8px;
             height: 8px;
             border-top: 1px solid #000;
@@ -182,32 +226,89 @@
       }
     }
   }
+}
 
-  transform: scaleY(0); /*デフォルトでは非表示の状態にしておく*/
-  transform-origin: center top; /*変形を適応する基準をtopとする*/
-  transition: all 0.3s; /*表示の変化を0.3秒に指定*/
+//hoverの動き
+.p-header-contents {
+  &::before {
+    background-color: rgba(129, 247, 133, 0.3);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.2s;
+  }
+}
+
+.p-header__item--arrow a {
+  &:hover {
+    + .p-header-contents {
+      &::before {
+        visibility: visible;
+        opacity: 1;
+        transform-origin: center top;
+        transform: scaleY(1);
+        transition: all 0.3s;
+        z-index: -2;
+      }
+    }
+  }
+}
+
+.p-header-contents {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .p-header-contents__inner {
-  transform: scaleY(0); /*デフォルトでは非表示の状態にしておく*/
-  transform-origin: center top; /*変形を適応する基準をtopとする*/
-  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: -2;
+  transition: all 0.2s;
 }
-.p-header__item:hover {
-  .p-header-contents {
-    transform: scaleY(1); /*Gナビメニューにホバーしたら表示*/
-    transition: all 1s; /*表示の変化を0.3秒に指定*/
+
+.p-header__item--arrow a {
+  &:hover {
+    + .p-header-contents .p-header-contents__inner {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: 0.1s;
+      transition: all 0.2s;
+      z-index: 1;
+    }
   }
-  .p-header-contents__inner {
-    transform: scaleY(1); /*Gナビメニューにホバーしたら表示*/
-    transition: all 1s;
-    transition-delay: 0.4s;
+}
+
+.is__stay {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+
+  &::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
   }
+}
+
+.is__visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .is__hover {
   &::after {
-    transform: rotate(-45deg) !important;
+    transform: rotate(-90deg) !important;
   }
 }
 
@@ -219,13 +320,13 @@
 
 .c-burger {
   z-index: 5;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
   span {
     display: block;
     height: 1px;
     width: 30px;
     background-color: #000;
+    transition: 0.1s;
 
     &:nth-child(1) {
       margin-bottom: 8px;
@@ -237,10 +338,14 @@
 }
 //開いたとき（is__activeの有無で管理）
 .is__active {
+  height: 24px;
+  position: relative;
   span {
     &:nth-child(1) {
+      position: absolute;
+      top: 50%;
       margin-bottom: 0;
-      transform: rotate(30deg) translate(0px, 2px);
+      transform: rotate(30deg);
       transition: 0.3s;
     }
     &:nth-child(2) {
@@ -249,8 +354,10 @@
       transition: 0.3s;
     }
     &:nth-child(3) {
+      position: absolute;
+      top: 50%;
       margin-bottom: 0;
-      transform: rotate(-30deg) translate(0px, 0px);
+      transform: rotate(-30deg);
       transition: 0.3s;
     }
   }
@@ -269,7 +376,7 @@
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(3px);
-  transition: all 1s;
+  transition: all 0.6s;
 
   #{$block}__menu {
     @include position.center;
@@ -283,17 +390,59 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        #{$block}__item {
-          a {
-          }
+      }
+    }
+
+    #{$block}__item {
+      text-align: center;
+      a {
+      }
+    }
+    #{$block}__btn {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 25px;
+      padding-right: 77px;
+      border-radius: 10px;
+      text-align: left;
+
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        vertical-align: middle;
+        right: 24px;
+        top: 50%;
+        width: 12px;
+        height: 1px;
+        background: #ffffff;
+        &:focus,
+        &:hover {
+          background: #81f785;
         }
       }
 
-      #{$block}__btn {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 188px;
-        border-radius: 10px;
+      &::after {
+        position: absolute;
+        content: "";
+        right: 24px;
+        top: 45%;
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg);
+      }
+
+      &:focus,
+      &:hover {
+        &::before {
+          background: #81f785;
+        }
+        &::after {
+          border-top: 1px solid #81f785;
+          border-right: 1px solid #81f785;
+        }
       }
     }
   }

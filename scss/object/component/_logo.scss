@@ -6,11 +6,19 @@
 @use "../../utility/font" as font;
 
 .c-logo {
-  font-size: rem.rem(19px);
-  letter-spacing: 0.05em;
+  font-size: rem.rem(24px);
+  letter-spacing: -0.03em;
   line-height: 1;
   color: #505050;
+
+  @media screen and (min-width: 980px) {
+    font-size: rem.rem(30px);
+  }
+
+  @include responsive.responsive(xxl) {
+    font-size: rem.rem(36px);
+  }
   a {
-    padding: 10px;
+    padding: 5px;
   }
 }

@@ -12,7 +12,7 @@ html {
     flex-flow: column;
     min-height: 100vh;
     color: #000;
-    font-family: "Inter", sans-serif;
+    font-family: sans-serif;
 
     ::selection {
       background: #dae7f7;
@@ -21,7 +21,8 @@ html {
       text-decoration: none;
       color: #000;
       transition: 0.3s;
-      font-family: "Inter", sans-serif;
+      font-family: sans-serif;
+      cursor: default;
 
       &:hover {
         transition: 0.3s;
